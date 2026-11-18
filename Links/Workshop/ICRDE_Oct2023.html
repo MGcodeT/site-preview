@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Meta Info for Google Search -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Yang Weng">
+    <meta property="og:description" content="Associate Professor of ECEE at Arizona State University">
+    <meta property="og:image" content="https://yweng3.github.io/Image/Photos/Yang.jpg">
+    <meta property="og:url" content="https://yweng3.github.io">
+    <meta name="author" content="Yang Weng">
+
+
+    <title>Workshop</title>
+
+    <!--dependencies-->
+    <link rel="stylesheet" href="../../CSS/homepage.css">
+    <link rel="stylesheet" href="../../CSS/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css"
+    integrity="sha512-BnbUDfEUfV0Slx6TunuB042k9tuKe3xrD6q4mg5Ed72LTgzDIcLPxg6yI2gcMFRyomt+yJJxE+zJwNmxki6/RA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="../../CSS/index.js" type="module"></script>
+
+    <style type="text/css">
+        .poster{
+            margin-bottom: 40px;
+        }
+        .poster img{
+            width: 450px;
+            
+        }
+
+        .poster img:hover{
+            cursor: pointer;
+            transform: scale(1.5);
+            transition: transform 0.8s;
+            border: 2px solid var(--asu-red);
+        }
+
+        .poster img:first-child:hover{
+            transform: translateX(100px) scale(1.5);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Entire Page -->
+    <div class="row">
+
+        <!-- Top-bar Menu -->
+        <div id="menu-placeholder"></div>
+        <script>
+          fetch('../../menu.html')
+            .then(response => response.text())
+            .then(data => {
+              document.getElementById('menu-placeholder').innerHTML = data;
+            });
+        </script>
+
+        <!-- Top Big Title -->
+        <div class="bigtitle" id="bigtitle">
+            <div class="thetitle">Energy Center Workshop
+                <div class="titlebutton">
+                    <a href="ICRDE_Oct2023.html"><i class="fas fa-home"></i></a>
+                    <a href="ICRDE_Oct2023_Hotel.html">Hotel</a>
+                </div>
+            </div>
+            
+        </div>
+
+        <!-- Image and title -->
+        <main class="row container">
+            <div class="column">
+            
+
+            <h2 style="font-size:2.5rem; margin-bottom: 30px;">Cybersecurity Technology for Critical Power Infrastructure AI-Based Centralized Defense and Edge Resilience</h2>
+
+            <div style="grid-template-columns: 660px 300px 300px;">
+                <div>
+                <p>Welcome to the Cybersecurity R&amp;D for Energy Workshop V. We are pleased to announce this 3-day event jointly hosted by Arizona State University. It will be held at the Hyatt Place Tempe Hotel near ASU on October 9-11. </p>
+
+                <p>We are delighted to have this opportunity to meet in person and share some progress updates and outcomes of this joint project with cybersecurity experts from industry, academia, national laboratories, and government agencies. In addition to the invited presentations, there will be a one-day meeting with industry experts focusing on the emerging technologies and some of the urgent R&amp;D needs in cybersecurity for energy systems. The presentations are on tool development, integration, demonstration of the practical values and potential impact of research outcomes that include cyberattack monitoring and mitigation, and commercialization in collaboration with industry partners.</p>
+
+                <p>We strive to take a leading role in converging cybersecurity solutions for energy systems to practice. We cordially invite you to join us in this unique event and look forward to seeing you in October.</p>
+
+                <h3>Highlights of Workshop Events</h3>
+                <ul>
+                    <li style="margin-bottom:15px;">Modeling and Monitoring of Energy Systems, (II) Knowledge Base and Learning of Cyberattacks, (III) Tools for Cyber Attacks Detection of IT/OT Architecture, and (IV) Tools for Control and Mitigation of Threats for Achieving Resilience</li>
+                    <li style="margin-bottom:15px;">1-day meeting with the industry to discuss collaboration opportunities and commercialization</li>
+                    <li style="margin-bottom:15px;">Keynote speeches from prominent leaders</li>
+                    <li style="margin-bottom:15px;">Tour of nearby attractions</li>
+                </ul>
+
+                </div>
+
+            </div>
+
+  
+</div>
+
+            </div>
+        </main>
+
+        
+    </div>
+</body>
+
+<script type="text/javascript">
+    document.getElementById("menu-Workshop").classList.add('current');
+</script>
+
+</html>

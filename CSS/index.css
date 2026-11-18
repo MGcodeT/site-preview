@@ -1,0 +1,242 @@
+/* For 2 columns */
+
+.myinfo{
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 12px;
+}
+
+.myinfo .myphoto{
+    background-image: url(../Image/Photos/Yang.jpg);
+    background-repeat: no-repeat;
+    height:  200px;
+    background-size: cover;
+    background-position: center;
+    border: 3px solid var(--asu-red);
+}
+
+.myinfo .mytitles{
+    font-size: 17px;
+    margin-left: 30px;
+}
+
+.myinfo p{
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+
+li{
+    margin-top: -10px;
+}
+
+.content-title{
+    margin-top: 25px;
+    width :100%;
+    font-weight: 700;
+    font-size: 19px;
+}
+
+.content-title::after{
+    content: '';
+    background-color: var(--asu-red);
+    height: 3px;
+    position: absolute;
+    margin-top: 30px;
+    left: 20px;
+    width: 100%;
+}
+
+/*For group members*/
+.personinfo{
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 120px 2000px;
+    grid-column-gap: 5px;
+}
+
+.personinfo .personphoto{
+    background-position:center;
+    background-repeat: no-repeat;
+    height:  150px;
+    background-size: cover;
+    border: 3px solid var(--asu-red);
+}
+
+.personinfo .persontitles{
+    /*height:  200px;*/
+    /*font-size: 17px;*/
+    margin-left: 20px;
+}
+
+.personinfo p{
+    margin-top: 0px;
+    margin-bottom: 2px;
+}
+
+.news{
+    width: 100%;
+    max-width: 1100px;
+    padding: 0 0px;
+    margin-left: 0;
+    margin-top: 15px;
+}
+
+.newshidden{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    width: 100%;
+    margin: 10px auto 0;
+}
+
+.newshidden .newsphoto{
+    background-repeat: no-repeat;
+    height:  200px;
+    background-size: cover;
+    background-position: center; 
+    border: 3px solid var(--asu-red);
+}
+
+/* For hovering on news */
+div[class=news] span:hover{
+    background-position:0 calc(100% - 1.5px);
+    border-bottom:none;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='squiggle-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.squiggle{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%238C1D40' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
+    background-repeat: repeat-x;
+    background-size: auto 4px;
+    padding-bottom: 5px;
+    cursor: pointer;
+}
+
+/*div[class=news]:hover .newshidden{
+    display: grid;
+}*/
+
+
+
+/* For products, facilities, outreaches */
+.productgrid{
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-column-gap: 5px;
+    width: 1300px;
+}
+
+.productcell{
+    padding-top: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    border: 2px solid var(--asu-red);
+}
+
+.producttitle{
+    /*height: 4%;*/
+    text-align: center;
+    font-weight: 700;
+}
+
+.productimage{
+    height: 96%;
+    text-align: center;
+}
+
+.productimage img{
+    width:  100%;
+    height: 100%;
+}
+
+.productvideo{
+    height: 96%;
+    text-align: center;
+}
+
+.productvideo iframe{
+    width:  100%;
+    height: 100%;
+}
+
+
+
+
+
+.latest-x-card {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 12px 14px;
+  max-width: 520px;
+}
+
+.latest-x-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.latest-x-label {
+  font-weight: 700;
+}
+
+.latest-x-text {
+  margin: 8px 0 10px 0;
+  line-height: 1.45;
+}
+
+.latest-x-date {
+  font-size: 0.9em;
+  opacity: 0.75;
+}
+
+.latest-x-link {
+  font-size: 0.95em;
+  text-decoration: none;
+}
+
+
+
+
+
+/* ===== Responsive homepage and group profiles ===== */
+@media (max-width: 1100px) {
+  .myinfo { grid-template-columns: 110px minmax(0, 1fr); gap: 12px; }
+  .myinfo .myphoto { height: 152px; }
+  .myinfo .mytitles { min-width: 0; margin-left: 0; font-size: 16px; }
+  .personinfo { width: 100%; grid-template-columns: 95px minmax(0, 1fr); gap: 12px; }
+  .personinfo .personphoto { height: 120px; }
+  .personinfo .persontitles { min-width: 0; margin-left: 0; }
+  .content-title { position: relative; }
+  .content-title::after {
+    position: static;
+    display: block;
+    width: 100%;
+    margin-top: 5px;
+  }
+  .news { max-width: 100%; }
+  .newshidden { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .newshidden > * { min-width: 0; }
+  .newshidden .newsphoto { width: 100% !important; height: 180px !important; }
+  .productgrid { grid-template-columns: minmax(0, 1fr); width: 100% !important; gap: 12px; }
+  .productcell { width: auto !important; }
+  .productcell { min-width: 0; }
+  .productvideo iframe { min-height: 200px; }
+  .sponsor-grid { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; gap: 10px !important; }
+  .sponsor-grid > div { min-width: 0; padding: 10px !important; }
+  .sponsor-grid img, .sponsor-grid svg { width: 100%; height: auto; }
+}
+
+@media (max-width: 520px) {
+  .newshidden { grid-template-columns: minmax(0, 1fr); }
+  .sponsor-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+  .myinfo { grid-template-columns: 100px minmax(0, 1fr); }
+  .personinfo { grid-template-columns: 86px minmax(0, 1fr); }
+}
+
+
+/* The previous 2000px grid column also overflowed laptop-sized screens. */
+@media (min-width: 1101px) {
+  .personinfo { grid-template-columns: 120px minmax(0, 1fr); }
+  .productgrid { max-width: 100%; }
+}

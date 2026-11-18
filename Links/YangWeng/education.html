@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Meta Info for Google Search -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Yang Weng">
+    <meta property="og:description" content="Associate Professor of ECEE at Arizona State University">
+    <meta property="og:image" content="https://yweng3.github.io/Image/Photos/Yang.jpg">
+    <meta property="og:url" content="https://yweng3.github.io">
+    <meta name="author" content="Yang Weng">
+
+
+    <title>YangWeng :: Education</title>
+
+    <!--dependencies-->
+    <link rel="stylesheet" href="../../CSS/homepage.css">
+    <link rel="stylesheet" href="../../CSS/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css"
+    integrity="sha512-BnbUDfEUfV0Slx6TunuB042k9tuKe3xrD6q4mg5Ed72LTgzDIcLPxg6yI2gcMFRyomt+yJJxE+zJwNmxki6/RA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="../../CSS/index.js" type="module"></script>
+</head>
+
+<body>
+
+    <!-- Entire Page -->
+    <div class="row">
+
+        <!-- Top-bar Menu -->
+        <div id="menu-placeholder"></div>
+        <script>
+            fetch("../../menu.html")
+                .then(response => {
+                    if (!response.ok) throw new Error("Could not load menu.html");
+                    return response.text();
+                })
+                .then(html => {
+                    document.getElementById("menu-placeholder").innerHTML = html;
+                    document.getElementById("menu-Yang").classList.add("current");
+                })
+                .catch(error => console.error("Menu loading error:", error));
+        </script>
+
+        <!-- Top Big Title -->
+        <div class="bigtitle" id="bigtitle">
+            <div class="thetitle">Yang Weng</div>
+        </div>
+
+        <!-- Image and title -->
+        <main class="row container">
+            <div class="column">
+            <div class="myinfo">
+                <div class="myphoto"></div>
+                <div class="mytitles">
+                    <p>Associate Professor</p>
+                    <a href="https://ecee.engineering.asu.edu/">School of Electrical, Computer and Energy Engineering</a> <br />
+                    <a href="http://www.asu.edu/">Arizona State University</a><br />
+                </div>
+            </div>
+
+            <div class="content-title">
+                Education
+            </div>
+            <p><a href="http://www.cmu.edu/">Carnegie Mellon University</a></p>
+            
+            <ul>
+                <li>Doctor of Philosophy, 2014<br />
+                <a href="http://www.ece.cmu.edu/">Department of Electrical and Computer Engineering</a> (ECE)<br />
+                <!--Advisors: <a href="http://users.ece.cmu.edu/~milic/">Marija Ilic</a> and <a href="http://users.ece.cmu.edu/~negi/">Rohit Negi</a><--></li>
+
+                <li><p>Master of Science in <strong>Machine Learning</strong>, 2014<br />
+                <a href="http://www.ml.cmu.edu/">Department of Machine Learning</a>, <a href="http://www.cs.cmu.edu//">School of <strong>Computer Science</strong></a></p><!--Advisor: <a href="http://www.cs.cmu.edu/~christos/">Christos Faloutsos</a>--></li>
+                
+                <li><p>Master of Science in <strong>ECE</strong>, 2013<br />
+                <a href="http://www.ece.cmu.edu/">Department of Electrical and Computer Engineering</a></p></li>
+            </ul>
+
+            <p><a href="http://www.uic.edu/">University of Illinois at Chicago</a></p>
+            <ul>
+                <li>Master of Science in <strong>Statistics</strong>, 2009<br />
+                <a href="http://www.math.uic.edu/">Department of Mathematics, Statistics, and Computer Science</a></li>
+            </ul>
+            
+            <p><a href="http://english.hust.edu.cn/">Huazhong University of Science and Technology</a></p>
+            <ul>
+                <li>Bachelor in Electrical Engineering, 2006<br />
+                <a href="http://aia.hust.edu.cn/">School of <strong>Artificial Intelligence</strong> and Automation</a>
+                </li>
+            </ul>
+
+            <div class="content-title">
+                Postdoc
+            </div>
+            <p><a href="http://www.stanford.edu/">Stanford University</a></p>
+            <ul>
+                <li><a href="https://tomkat.stanford.edu/people/postdoc_fellows">TomKat Postdoctoral Fellow</a><br />
+                <a href="https://tomkat.stanford.edu/">TomKat Center for Sustainable Energy</a> <br />
+            </ul>
+
+            </div>
+        </main>
+
+        
+    </div>
+</body>
+
+</html>
