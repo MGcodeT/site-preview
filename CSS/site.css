@@ -107,9 +107,20 @@ table.agenda { width:100%; table-layout:auto; }
 table.agenda td,table.agenda th { overflow-wrap:anywhere; }
 /* Speakers: independent photo height and text flow at every viewport. */
 .web { gap:24px; padding:28px; margin:0 0 22px; border:1px solid var(--yw-line); border-radius:8px; min-height:0; }
-.web .speaker { grid-template-columns:repeat(3,minmax(0,180px)); width:46%; margin:0; height:auto; gap:12px; direction:ltr; }
+.web .speaker {
+    display: grid;
+    grid-template-columns: none;
+    grid-auto-flow: column;
+    grid-auto-columns: 180px;
+    flex: 0 0 auto;
+    width: auto;
+    margin: 0;
+    height: auto;
+    gap: 12px;
+    direction: ltr;
+}
 .web .speaker .speaker-content { height:auto; min-width:0; border:1px solid #ccb3b6; border-radius:5px; overflow:hidden; background:#fff; }
-.web .speaker .speaker-photo { height:auto; aspect-ratio:4/5; background-size:contain; background-position:center; background-color:#f0e8df; }
+.web .speaker .speaker-photo { height:auto; aspect-ratio:4/5; background-size:cover; background-position:center; background-color:#f0e8df; }
 .speaker-name,.speaker-school { position:static; padding:7px 8px 0; line-height:1.4; }
 .speaker-school { padding-bottom:10px; }
 .web .content { flex:1; min-width:0; width:auto; padding:0; height:auto; }
@@ -143,8 +154,14 @@ table.agenda td,table.agenda th { overflow-wrap:anywhere; }
  .section-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
  .container,.row .container { padding:0 18px; }
  .web { flex-direction:column; align-items:stretch; }
- .web .speaker { width:100%; grid-template-columns:repeat(3,minmax(0,180px)); }
- .column .two-column { grid-template-columns:minmax(0,1fr); }
+ .web .speaker {
+    width: 100%;
+    flex: initial;
+    grid-auto-flow: row;
+    grid-auto-columns: auto;
+    grid-template-columns: repeat(3, minmax(0, 180px));
+ }
+.column .two-column { grid-template-columns:minmax(0,1fr); }
 }
 @media (max-width:650px) {
  .bigtitle { padding:24px 20px; }
