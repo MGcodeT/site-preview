@@ -162,3 +162,67 @@ table.agenda td,table.agenda th { overflow-wrap:anywhere; }
 .yw-footer { text-align:left; background:transparent; }
 .hiddenImage { left:auto; right:20px; max-width:calc(100vw - 40px); }
 @media (max-width:1399px) { .hiddenImage { display:none !important; } }
+/* Desktop: compact navigation and consistently left-aligned content */
+@media (min-width: 1400px) {
+
+    /* Keep navigation items together with fixed spacing */
+    .yw-nav {
+        justify-content: flex-start;
+        gap: 0;
+    }
+
+    .yw-items {
+        flex: 0 0 auto;
+        justify-content: flex-start;
+        gap: 12px;
+    }
+
+    .yw-item {
+        flex: 0 0 auto;
+    }
+
+    /* Keep item sizing consistent across large screen widths */
+    .yw-link {
+        font-size: 17px;
+        padding: 10px 14px;
+    }
+
+    /*
+       Home button's left edge:
+       12px header padding + 1px border + 22px navigation padding
+       = 35px from the viewport's left edge.
+    */
+
+    /* Align the page title with Home */
+    .bigtitle {
+        padding-left: 35px;
+        padding-right: 35px;
+    }
+
+    /* Anchor the main content to the left instead of centering it */
+    .container,
+    .row .container {
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 35px;
+    }
+
+    /* Remove the extra inset inside the main content */
+    .container > .column {
+        padding-left: 0;
+    }
+
+    /* The EEE 360 page has an additional centered wrapper */
+    .eee360-content {
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 0;
+    }
+
+    /* Align the footer with the same left edge */
+    .yw-footer {
+        margin-left: 35px;
+        margin-right: 0;
+        padding-left: 0;
+    }
+}
