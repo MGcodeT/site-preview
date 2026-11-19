@@ -1,6 +1,125 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Research | Yang Weng | ASU</title>
-<link rel="stylesheet" href="CSS/homepage.css"><link rel="stylesheet" href="CSS/index.css"><link rel="stylesheet" href="CSS/site.css"><script type="module" src="CSS/index.js"></script></head>
-<body data-site-section="research"><div id="menu-placeholder"><a class="menu-loading" href="menu.html">Navigation</a></div><noscript><p class="site-notice">Enable JavaScript for shared navigation. <a href="menu.html">View all navigation links</a>.</p></noscript>
-<div class="bigtitle"><div class="thetitle"><p class="section-eyebrow">Yang Weng · Arizona State University</p><h1>Research</h1></div></div>
-<main id="main-content" tabindex="-1" class="container directory-page"><div class="column"><p class="page-lead">Sustainability, security, power systems, machine learning, and convex optimization.</p><section id="research-themes" class="theme-panel"><h2>Research Themes</h2><p>Sustainability, security, power systems, machine learning, and convex optimization</p></section><div class="section-grid"><a class="section-card" href="Links/Research/featured-projects.html"><h2>Featured Projects</h2><p>A dedicated space for selected research projects.</p><span class="card-arrow" aria-hidden="true">↗</span></a><a class="section-card" href="consortium.html"><h2>Consortium / Collaborations</h2><p>Focus areas, mission, and vision of the consortium.</p><span class="card-arrow" aria-hidden="true">↗</span></a><a class="section-card" href="Links/Group/facility.html"><h2>Lab Facilities</h2><p>Explore power system facilities and demonstrations.</p><span class="card-arrow" aria-hidden="true">↗</span></a><a class="section-card" href="publication.html"><h2>All Publications</h2><p>Search research publications by title and browse by topic or year.</p><span class="card-arrow" aria-hidden="true">↗</span></a></div></div></main></body></html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Research Themes — Yang Weng, Arizona State University. Draft page with illustrative placeholder content.">
+  <title>Research Themes | Yang Weng | ASU</title>
+  <link rel="stylesheet" href="CSS/homepage.css">
+  <link rel="stylesheet" href="CSS/index.css">
+  <link rel="stylesheet" href="CSS/site.css">
+  <script type="module" src="CSS/index.js"></script>
+  <style>
+/* PAGE-LOCAL STYLES. The shared navigation and title band remain in CSS/site.css. */
+.rw-main { --rw-red:#8c1d40; --rw-gold:#ffc627; --rw-ink:#252329; --rw-muted:#625e63; --rw-rule:#dedbde; --rw-paper:#f5f6f7; color:var(--rw-ink); font:16px/1.65 Georgia,"Times New Roman",serif; }
+#main-content.rw-main { display:block; width:calc(100% - 70px); max-width:1330px; margin:32px 0 64px 35px; padding:0; min-width:0; }
+.rw-main *, .rw-main *::before, .rw-main *::after { box-sizing:border-box; }
+.rw-main h2,.rw-main h3,.rw-main p,.rw-main figure { margin:0; }
+.rw-main h2,.rw-main h3 { font-family:Georgia,"Times New Roman",serif; line-height:1.25; letter-spacing:-.02em; }
+.rw-main h2 { font-size:28px; font-weight:700; }
+.rw-main h3 { font-size:23px; font-weight:700; }
+.rw-main p + p { margin-top:12px; }
+.rw-main a { color:var(--rw-red); text-decoration:underline; text-underline-offset:4px; border-bottom:0; }
+.rw-main a:hover { color:#61142d; border-bottom:0; text-decoration-thickness:2px; }
+.rw-main :focus-visible { outline:3px solid #8c1d40; outline-offset:5px; }
+.rw-main .rw-kicker { font:400 14px/1.4 Arial,Helvetica,sans-serif; letter-spacing:.09em; text-transform:uppercase; color:var(--rw-red); margin-bottom:12px; }
+.rw-main .rw-note { border-left:3px solid var(--rw-gold); padding:7px 0 7px 14px; font:14px/1.5 Arial,Helvetica,sans-serif; color:var(--rw-muted); margin-bottom:28px; }
+.rw-main .rw-intro { display:grid; grid-template-columns:minmax(0,1.8fr) minmax(240px,1fr); gap:50px; align-items:start; padding:0 0 32px; }
+.rw-main .rw-intro h2 { max-width:720px; margin-bottom:14px; }
+.rw-main .rw-intro p { max-width:740px; }
+.rw-main .rw-index { padding:2px 0 0 24px; border-left:1px solid var(--rw-rule); }
+.rw-main .rw-index a { display:block; padding:9px 0; text-decoration:none; }
+.rw-main .rw-index a:hover { text-decoration:underline; }
+.rw-main .rw-index .rw-kicker { color:var(--rw-muted); margin-bottom:5px; }
+.rw-main .rw-theme { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.1fr); gap:42px; align-items:center; padding:38px 0; border-top:1px solid var(--rw-rule); scroll-margin-top:110px; }
+.rw-main .rw-theme:nth-of-type(even) .rw-art { order:2; }
+.rw-main .rw-theme h2 { margin-bottom:16px; }
+.rw-main .rw-question { font-size:19px; color:var(--rw-red); margin-bottom:14px; }
+.rw-main .rw-tags { display:flex; flex-wrap:wrap; gap:7px 16px; list-style:none; padding:0; margin:18px 0; font:14px/1.5 Arial,Helvetica,sans-serif; color:var(--rw-muted); }
+.rw-main .rw-tags li { margin:0; padding:0 0 0 10px; border-left:2px solid #c6a04a; }
+.rw-main .rw-art { margin:0; background:var(--rw-paper); border:1px solid #e5e5e8; overflow:hidden; }
+.rw-main .rw-art svg { display:block; width:100%; height:auto; }
+.rw-main .rw-art figcaption { font:14px/1.4 Arial,Helvetica,sans-serif; color:var(--rw-muted); padding:10px 16px; border-top:1px solid #e5e5e8; background:#fff; }
+.rw-main .rw-path { border-top:3px solid var(--rw-red); margin-top:18px; padding-top:25px; }
+.rw-main .rw-path-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:30px; margin-top:22px; }
+.rw-main .rw-path-grid h3 { font-size:20px; margin-bottom:10px; }
+.rw-main .rw-path-grid p { color:var(--rw-muted); }
+.rw-main .rw-end { margin-top:38px; padding-top:24px; border-top:1px solid var(--rw-rule); display:flex; flex-wrap:wrap; gap:16px 32px; align-items:baseline; justify-content:space-between; }
+.rw-main .rw-end h2 { font-size:23px; }
+.rw-main .rw-end-links { display:flex; flex-wrap:wrap; gap:12px 24px; }
+/* Project gallery: native details work even without JavaScript. */
+.rw-main .rw-toolbar { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:16px; border-top:1px solid var(--rw-rule); border-bottom:1px solid var(--rw-rule); padding:16px 0; margin-bottom:26px; }
+.rw-main .rw-filters { display:flex; flex-wrap:wrap; gap:8px; }
+.rw-main .rw-filters button { border:1px solid #c9c4c7; background:white; color:var(--rw-ink); font:400 16px/1.4 Arial,Helvetica,sans-serif; padding:8px 14px; border-radius:3px; cursor:pointer; }
+.rw-main .rw-filters button:hover { border-color:var(--rw-red); }
+.rw-main .rw-filters button[aria-pressed="true"] { background:var(--rw-red); color:white; border-color:var(--rw-red); }
+.rw-main .rw-count { font:14px/1.4 Arial,Helvetica,sans-serif; color:var(--rw-muted); margin:0; }
+.rw-main .rw-gallery { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:30px; align-items:start; }
+.rw-main .rw-project { min-width:0; border:1px solid var(--rw-rule); background:white; }
+.rw-main .rw-project[hidden],.rw-main [hidden] { display:none !important; }
+.rw-main .rw-project .rw-art { border:0; border-bottom:1px solid var(--rw-rule); }
+.rw-main .rw-project-body { padding:24px; }
+.rw-main .rw-project-meta { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:8px; margin-bottom:14px; }
+.rw-main .rw-project-meta .rw-kicker { margin:0; letter-spacing:.045em; }
+.rw-main .rw-example { font:14px/1.4 Arial,Helvetica,sans-serif; color:#635b60; }
+.rw-main .rw-project h3 { margin-bottom:12px; }
+.rw-main .rw-project details { margin-top:20px; border-top:1px solid var(--rw-rule); padding-top:14px; }
+.rw-main .rw-project summary { cursor:pointer; color:var(--rw-red); font:400 16px/1.5 Arial,Helvetica,sans-serif; }
+.rw-main .rw-project details[open] summary { margin-bottom:16px; }
+.rw-main .rw-project dl { margin:0; }
+.rw-main .rw-project dt { font:700 14px/1.5 Arial,Helvetica,sans-serif; margin-top:14px; }
+.rw-main .rw-project dd { margin:4px 0 0; color:var(--rw-muted); }
+.rw-main .rw-resources { border-top:1px solid var(--rw-rule); padding-top:14px; margin-top:16px; font:14px/1.5 Arial,Helvetica,sans-serif; color:var(--rw-muted); }
+@media (max-width:1399px) { #main-content.rw-main { width:calc(100% - 40px); margin-left:20px; } }
+@media (max-width:900px) {
+ .rw-main .rw-intro { grid-template-columns:1fr; gap:24px; }
+ .rw-main .rw-index { border-left:0; border-top:1px solid var(--rw-rule); padding:15px 0 0; }
+ .rw-main .rw-index a { display:inline-block; margin-right:22px; }
+ .rw-main .rw-theme { gap:25px; }
+}
+@media (max-width:650px) {
+ #main-content.rw-main { margin-top:24px; }
+ .rw-main h2 { font-size:25px; }
+ .rw-main h3 { font-size:22px; }
+ .rw-main .rw-theme,.rw-main .rw-gallery,.rw-main .rw-path-grid { grid-template-columns:1fr; }
+ .rw-main .rw-theme { padding:28px 0; gap:24px; }
+ .rw-main .rw-theme:nth-of-type(even) .rw-art { order:0; }
+ .rw-main .rw-project-body { padding:20px; }
+ .rw-main .rw-intro { padding-bottom:26px; }
+ .rw-main .rw-index a { display:block; }
+}
+</style>
+</head>
+<body data-site-section="research">
+  <!-- Navigation and footer are loaded centrally by the existing site.js. -->
+  <div id="menu-placeholder"><a class="menu-loading" href="menu.html">Navigation</a></div>
+  <noscript><p class="site-notice">JavaScript is needed for the shared navigation. <a href="menu.html">View navigation links</a>.</p></noscript>
+  <div class="bigtitle"><div class="thetitle"><h1>Research Themes</h1></div></div>
+  <main id="main-content" tabindex="-1" class="rw-main">
+    <!-- EDIT: Replace the notice and all sample copy after faculty review. -->
+    <p class="rw-note">Draft content — the themes, descriptions, and illustrations below are placeholders for review.</p>
+    <div class="rw-intro">
+      <div><p class="rw-kicker">Research themes</p><h2>Intelligent methods.<br>Resilient energy systems.</h2><p>A sample overview connecting machine learning, cyber-physical security, and sustainable grid operation. Use this space for a concise statement of the group’s research vision.</p></div>
+      <nav class="rw-index" aria-label="Research themes on this page"><p class="rw-kicker">Explore the directions</p><a href="#trustworthy-ai">Trustworthy AI</a><a href="#grid-security">Cyber-physical security</a><a href="#sustainable-energy">Sustainable energy</a></nav>
+    </div>
+    <!-- THEME: Trustworthy AI. Replace text and the inline SVG figure here. -->
+    <section class="rw-theme" id="trustworthy-ai" aria-labelledby="trustworthy-ai-title">
+      <figure class="rw-art"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" role="img" aria-label="Conceptual network connecting measurements, structured learning, and decisions."><rect width="600" height="300" fill="#f5f6f7"/><g stroke="#e5e8eb" stroke-width="1"><path d="M0 0V300"/><path d="M40 0V300"/><path d="M80 0V300"/><path d="M120 0V300"/><path d="M160 0V300"/><path d="M200 0V300"/><path d="M240 0V300"/><path d="M280 0V300"/><path d="M320 0V300"/><path d="M360 0V300"/><path d="M400 0V300"/><path d="M440 0V300"/><path d="M480 0V300"/><path d="M520 0V300"/><path d="M560 0V300"/><path d="M600 0V300"/><path d="M0 0H600"/><path d="M0 40H600"/><path d="M0 80H600"/><path d="M0 120H600"/><path d="M0 160H600"/><path d="M0 200H600"/><path d="M0 240H600"/><path d="M0 280H600"/></g><g stroke="#b4bdc4" stroke-width="2"><path d="M75 90L190 65"/><path d="M75 90L190 150"/><path d="M75 210L190 150"/><path d="M75 210L190 235"/><path d="M190 65L320 90"/><path d="M190 150L320 90"/><path d="M190 150L320 210"/><path d="M190 235L320 210"/><path d="M320 90L445 65"/><path d="M320 90L445 150"/><path d="M320 210L445 150"/><path d="M320 210L445 235"/><path d="M445 65L535 150"/><path d="M445 150L535 150"/><path d="M445 235L535 150"/></g><path d="M75 210L190 150L320 90L445 150L535 150" fill="none" stroke="#8c1d40" stroke-width="4"/><circle cx="75" cy="90" r="10" fill="white" stroke="#8c1d40" stroke-width="2"/><circle cx="75" cy="210" r="10" fill="white" stroke="#8c1d40" stroke-width="2"/><circle cx="190" cy="65" r="10" fill="white" stroke="#8c1d40" stroke-width="2"/><circle cx="190" cy="150" r="15" fill="#8c1d40" stroke="#8c1d40" stroke-width="2"/><circle cx="190" cy="235" r="10" fill="white" stroke="#8c1d40" stroke-width="2"/><circle cx="320" cy="90" r="15" fill="#ffc627" stroke="#8c1d40" stroke-width="2"/><circle cx="320" cy="210" r="10" fill="white" stroke="#8c1d40" stroke-width="2"/><circle cx="445" cy="65" r="10" fill="white" stroke="#8c1d40" stroke-width="2"/><circle cx="445" cy="150" r="15" fill="#8c1d40" stroke="#8c1d40" stroke-width="2"/><circle cx="445" cy="235" r="10" fill="white" stroke="#8c1d40" stroke-width="2"/><circle cx="535" cy="150" r="10" fill="#8c1d40" stroke="#8c1d40" stroke-width="2"/><g font-family="Arial,sans-serif" font-size="16" fill="#625e63"><text x="40" y="282">Measurements</text><text x="253" y="282">Structure + learning</text><text x="465" y="282">Decisions</text></g></svg><figcaption>Concept illustration · replace with a research figure</figcaption></figure>
+      <div><p class="rw-kicker">Trustworthy AI</p><h2 id="trustworthy-ai-title">Learning that respects the physics of the grid.</h2><p class="rw-question">How can data-driven models become useful, understandable tools for power-system decisions?</p><p>This theme could introduce methods that combine physical structure with machine learning for estimation, forecasting, and decision support. Replace this sample text with the group’s research scope and distinguishing ideas.</p><ul class="rw-tags"><li>Physics-informed learning</li><li>Interpretability</li><li>Uncertainty</li></ul><a href="Links/Research/featured-projects.html?theme=ai">Explore example projects</a></div>
+    </section>
+    <!-- THEME: Cyber-physical security. Replace text and the inline SVG figure here. -->
+    <section class="rw-theme" id="grid-security" aria-labelledby="grid-security-title">
+      <figure class="rw-art"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" role="img" aria-label="Conceptual grid protection illustration with connected measurements."><rect width="600" height="300" fill="#f5f6f7"/><g stroke="#e5e8eb" stroke-width="1"><path d="M0 0V300"/><path d="M40 0V300"/><path d="M80 0V300"/><path d="M120 0V300"/><path d="M160 0V300"/><path d="M200 0V300"/><path d="M240 0V300"/><path d="M280 0V300"/><path d="M320 0V300"/><path d="M360 0V300"/><path d="M400 0V300"/><path d="M440 0V300"/><path d="M480 0V300"/><path d="M520 0V300"/><path d="M560 0V300"/><path d="M600 0V300"/><path d="M0 0H600"/><path d="M0 40H600"/><path d="M0 80H600"/><path d="M0 120H600"/><path d="M0 160H600"/><path d="M0 200H600"/><path d="M0 240H600"/><path d="M0 280H600"/></g><g stroke="#b4bdc4" stroke-width="3"><path d="M65 70L150 150"/><path d="M65 230L150 150"/><path d="M150 150L250 65"/><path d="M150 150L250 235"/><path d="M250 65L370 100"/><path d="M250 235L370 215"/><path d="M370 100L370 215"/><path d="M370 100L520 65"/><path d="M370 215L520 235"/></g><path d="M65 70L150 150L250 65" fill="none" stroke="#8c1d40" stroke-width="4" stroke-dasharray="7 6"/><circle cx="65" cy="70" r="10" fill="white" stroke="#8c1d40" stroke-width="3"/><circle cx="65" cy="230" r="10" fill="white" stroke="#8c1d40" stroke-width="3"/><circle cx="150" cy="150" r="10" fill="white" stroke="#8c1d40" stroke-width="3"/><circle cx="250" cy="65" r="10" fill="white" stroke="#8c1d40" stroke-width="3"/><circle cx="250" cy="235" r="10" fill="white" stroke="#8c1d40" stroke-width="3"/><circle cx="370" cy="100" r="10" fill="white" stroke="#8c1d40" stroke-width="3"/><circle cx="370" cy="215" r="10" fill="white" stroke="#8c1d40" stroke-width="3"/><circle cx="520" cy="65" r="10" fill="white" stroke="#8c1d40" stroke-width="3"/><circle cx="520" cy="235" r="10" fill="white" stroke="#8c1d40" stroke-width="3"/><path d="M300 74L350 92V139Q350 180 300 207Q250 180 250 139V92Z" fill="#8c1d40" stroke="white" stroke-width="5"/><path d="M277 139L293 155L324 119" fill="none" stroke="#ffc627" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><g font-family="Arial,sans-serif" font-size="16" fill="#625e63"><text x="34" y="282">Sensing</text><text x="258" y="282">Protection</text><text x="468" y="282">Operation</text></g></svg><figcaption>Concept illustration · replace with a research figure</figcaption></figure>
+      <div><p class="rw-kicker">Cyber-physical security</p><h2 id="grid-security-title">Keeping grid decisions reliable under disruption.</h2><p class="rw-question">How can a power system continue to operate when its measurements or communications cannot be fully trusted?</p><p>Use this section to describe work on attack detection, proactive defense, and resilient operation. Explain the threat or operational challenge, then introduce the group’s approach in language accessible to a broad engineering audience.</p><ul class="rw-tags"><li>Attack detection</li><li>Proactive defense</li><li>Resilience</li></ul><a href="Links/Research/featured-projects.html?theme=security">Explore example projects</a></div>
+    </section>
+    <!-- THEME: Sustainable energy. Replace text and the inline SVG figure here. -->
+    <section class="rw-theme" id="sustainable-energy" aria-labelledby="sustainable-energy-title">
+      <figure class="rw-art"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" role="img" aria-label="Conceptual coordination of solar power, storage, and wind power."><rect width="600" height="300" fill="#f5f6f7"/><g stroke="#e5e8eb" stroke-width="1"><path d="M0 0V300"/><path d="M40 0V300"/><path d="M80 0V300"/><path d="M120 0V300"/><path d="M160 0V300"/><path d="M200 0V300"/><path d="M240 0V300"/><path d="M280 0V300"/><path d="M320 0V300"/><path d="M360 0V300"/><path d="M400 0V300"/><path d="M440 0V300"/><path d="M480 0V300"/><path d="M520 0V300"/><path d="M560 0V300"/><path d="M600 0V300"/><path d="M0 0H600"/><path d="M0 40H600"/><path d="M0 80H600"/><path d="M0 120H600"/><path d="M0 160H600"/><path d="M0 200H600"/><path d="M0 240H600"/><path d="M0 280H600"/></g><circle cx="99" cy="76" r="23" fill="#ffc627"/><g stroke="#8c1d40" stroke-width="3" fill="white"><path d="M45 118H155L175 172H25Z"/><path d="M65 118L55 172M95 118V172M125 118L140 172M35 145H165M100 172V201"/><rect x="260" y="93" width="85" height="100" rx="8"/><path d="M285 93V82H320V93"/><path d="M488 89V201M488 89L455 45M488 89L540 80M488 89L470 140"/></g><path d="M291 112L279 147H302L293 174L326 135H303L314 112Z" fill="#8c1d40"/><path d="M100 201V225H488V201M303 193V225" stroke="#8c1d40" stroke-width="3" fill="none"/><circle cx="303" cy="225" r="10" fill="#ffc627" stroke="#8c1d40" stroke-width="2"/><g font-family="Arial,sans-serif" font-size="16" fill="#625e63"><text x="60" y="282">Renewables</text><text x="254" y="282">Coordination</text><text x="455" y="282">Flexibility</text></g></svg><figcaption>Concept illustration · replace with a research figure</figcaption></figure>
+      <div><p class="rw-kicker">Sustainable energy</p><h2 id="sustainable-energy-title">Coordinating a more flexible energy system.</h2><p class="rw-question">How can renewable generation, storage, and flexible demand work together reliably?</p><p>Introduce research on renewable integration, distributed resources, and grid optimization here. Replace this paragraph with concrete questions about the systems, operating conditions, and decisions the group studies.</p><ul class="rw-tags"><li>Distributed resources</li><li>Optimization</li><li>Renewable integration</li></ul><a href="Links/Research/featured-projects.html?theme=energy">Explore example projects</a></div>
+    </section>
+    <section class="rw-path" aria-labelledby="approach-title"><p class="rw-kicker">Across the themes</p><h2 id="approach-title">From a research question to a useful method.</h2><div class="rw-path-grid"><div><h3>Understand the system</h3><p>Describe the physical setting, available data, and practical constraints that motivate the research.</p></div><div><h3>Develop the method</h3><p>Explain the central idea and how physics, learning, and optimization contribute to it.</p></div><div><h3>Evaluate in context</h3><p>Introduce the benchmarks, experiments, and real-world settings used to assess the approach.</p></div></div></section>
+    <div class="rw-end"><h2>Explore the work in more detail</h2><div class="rw-end-links"><a href="Links/Research/featured-projects.html">Featured projects</a><a href="publication.html">All publications</a><a href="consortium.html">Collaborations</a></div></div>
+  </main>
+
+</body>
+</html>
