@@ -399,7 +399,6 @@ body {
 
 
 /* ===== Smaller screens ===== */
-
 @media (max-width: 1399px) {
     .hiddenImage {
         display: none !important;
@@ -419,8 +418,23 @@ body {
         border-top-color: #ddd;
     }
 
+    /* Same left and right spacing for title and content */
     .bigtitle {
         padding-left: 20px;
         padding-right: 20px;
+    }
+
+    .container,
+    .row .container {
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    /* Remove the additional inset inside the container */
+    .container > .column {
+        padding-left: 0;
+        padding-right: 0;
     }
 }
