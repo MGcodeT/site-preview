@@ -40,9 +40,22 @@ button,input { font:inherit; }
 .yw-skip { position:absolute; top:-100px; left:22px; padding:10px 18px; color:#21171a; background:var(--asu-yellow); z-index:2; }
 .yw-skip:focus { top:12px; }
 .bigtitle { position:relative; inset:auto; height:auto; min-height:100px; margin:0; padding:32px max(28px,calc((100vw - 1360px)/2)); background:#f6efe6; border-bottom:1px solid #dfd1c6; box-shadow:none; transform:none !important; }
-.thetitle { margin:0; font-family:Georgia,serif; color:var(--yw-maroon); font-size:clamp(23px,2.3vw,34px); font-weight:700; line-height:1.25; }
+.thetitle { margin:0; font-family:Georgia,serif; color:var(--yw-maroon); font-size:clamp(23px,2.3vw,34px); font-weight:700; line-height:1.25; display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 12px 24px;}
 .thetitle h1 { margin:0; font:inherit; }
-.thetitle .titlebutton { display:flex; flex-wrap:wrap; gap:8px; float:none; margin:14px 0 0; font:14px Arial,sans-serif; }
+.thetitle .titlebutton {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    flex: 0 0 auto;
+    gap: 8px;
+    float: none;
+    margin: 0 0 0 auto;
+    font: 400 16px/1.4 Arial, sans-serif;
+}
 .titlebutton a { color:var(--yw-maroon); padding:7px 12px; border:1px solid #c4a596; border-radius:5px; }
 .titlebutton a:hover { background:#fff; color:var(--asu-red); }
 .section-eyebrow { margin:0 0 10px; font:600 11px/1.4 Arial,sans-serif; letter-spacing:1.5px; text-transform:uppercase; color:#8b635d; }
@@ -155,6 +168,16 @@ table.agenda td,table.agenda th { overflow-wrap:anywhere; }
  .bigImageDes p { font-size:17px; }
  .yw-footer { padding:24px 20px; gap:22px; }
  .yw-footer>div { flex-basis:100%; }
+ .thetitle {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .thetitle .titlebutton {
+        margin: 0;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
 }
 /* ===== Shared compatibility and accessibility ===== */
 
