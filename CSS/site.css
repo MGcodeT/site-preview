@@ -156,21 +156,213 @@ table.agenda td,table.agenda th { overflow-wrap:anywhere; }
  .yw-footer { padding:24px 20px; gap:22px; }
  .yw-footer>div { flex-basis:100%; }
 }
-@media (prefers-reduced-motion:reduce) { *,*::before,*::after { scroll-behavior:auto !important; } .section-card { transition:none; } }
-/* Isolate shared navigation from broad legacy gallery selectors. */
-.yw-nav span,.yw-nav span:hover { color:inherit; }
-.yw-footer { text-align:left; background:transparent; }
-.hiddenImage { left:auto; right:20px; max-width:calc(100vw - 40px); }
-@media (max-width:1399px) { .hiddenImage { display:none !important; } }
-/* Desktop: compact navigation and consistently left-aligned content */
-@media (min-width: 1400px) {
+/* ===== Shared compatibility and accessibility ===== */
 
-    /* Keep navigation items together with fixed spacing */
-    .yw-nav {
-        justify-content: flex-start;
-        gap: 0;
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        scroll-behavior: auto !important;
     }
 
+    .section-card {
+        transition: none;
+    }
+}
+
+.yw-nav span,
+.yw-nav span:hover {
+    color: inherit;
+}
+
+.yw-footer {
+    text-align: left;
+    background: transparent;
+}
+
+.hiddenImage {
+    left: auto;
+    right: 20px;
+    max-width: calc(100vw - 40px);
+}
+
+
+/* ===== Page background and text ===== */
+
+html,
+body {
+    background: #fff;
+}
+
+body {
+    font-size: 16px;
+}
+
+
+/* ===== White navigation bar with ASU logo ===== */
+
+#menu-placeholder {
+    min-height: 56px;
+}
+
+.yw-header {
+    padding: 0;
+    background: #fff;
+}
+
+.yw-nav {
+    width: 100%;
+    min-height: 56px;
+    margin: 0;
+    padding: 6px 35px;
+
+    justify-content: flex-start;
+    column-gap: 24px;
+    row-gap: 0;
+
+    background: #fff;
+    color: #212121;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+
+    font-family: inherit;
+    font-size: 16px;
+}
+
+/* Logo */
+
+.yw-logo {
+    display: flex;
+    align-items: center;
+    flex: 0 0 auto;
+}
+
+.yw-logo img {
+    display: block;
+    width: auto;
+    height: 36px;
+    max-width: 190px;
+    object-fit: contain;
+}
+
+/* Menu labels and icons */
+
+.yw-link {
+    color: #212121;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.4;
+    min-height: 40px;
+    padding: 7px 10px;
+}
+
+.yw-icon {
+    width: 21px;
+    height: 21px;
+    color: #8C1D40;
+}
+
+.yw-top {
+    position: relative;
+    border-radius: 0;
+}
+
+.yw-expand {
+    color: #212121;
+    min-height: 40px;
+}
+
+.yw-top:hover,
+.yw-item.is-expanded > .yw-top {
+    background: #f4f4f4;
+}
+
+/* Selected item: maroon line above the whole item */
+
+.yw-item.is-current > .yw-top {
+    background: transparent;
+    border-color: transparent;
+    color: #212121;
+    box-shadow: none;
+}
+
+.yw-item.is-current .yw-link {
+    color: #212121;
+    font-weight: 400;
+}
+
+.yw-item.is-current .yw-icon {
+    color: #8C1D40;
+}
+
+.yw-item.is-current > .yw-top::before {
+    content: "";
+    position: absolute;
+    top: -6px;
+    left: 8px;
+    right: 8px;
+    height: 4px;
+    background: #8C1D40;
+    border-radius: 2px;
+}
+
+/* Keyboard focus */
+
+.yw-nav :focus-visible {
+    outline-color: #8C1D40;
+}
+
+/* Collapsed-menu button */
+
+.yw-toggle {
+    min-height: 40px;
+    padding: 7px 10px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.4;
+    color: #8C1D40;
+    background: #fff;
+    border: 1px solid #8C1D40;
+}
+
+
+/* ===== Maroon title area ===== */
+
+.bigtitle {
+    background: #8C1D40;
+    min-height: 0;
+    padding: 18px 35px;
+    border-bottom: 0;
+}
+
+.bigtitle .thetitle,
+.bigtitle .thetitle h1 {
+    color: #fff;
+    font-size: 22px;
+    line-height: 1.35;
+}
+
+/* Hide the extra institutional line above page titles */
+
+.section-eyebrow {
+    display: none;
+}
+
+/* Local links that appear inside some title areas */
+
+.bigtitle .titlebutton a {
+    color: #fff;
+    border-color: rgba(255, 255, 255, 0.55);
+}
+
+.bigtitle .titlebutton a:hover {
+    color: #8C1D40;
+    background: #fff;
+}
+
+
+/* ===== Desktop spacing and left alignment ===== */
+
+@media (min-width: 1400px) {
     .yw-items {
         flex: 0 0 auto;
         justify-content: flex-start;
@@ -181,25 +373,6 @@ table.agenda td,table.agenda th { overflow-wrap:anywhere; }
         flex: 0 0 auto;
     }
 
-    /* Keep item sizing consistent across large screen widths */
-    .yw-link {
-        font-size: 17px;
-        padding: 10px 14px;
-    }
-
-    /*
-       Home button's left edge:
-       12px header padding + 1px border + 22px navigation padding
-       = 35px from the viewport's left edge.
-    */
-
-    /* Align the page title with Home */
-    .bigtitle {
-        padding-left: 35px;
-        padding-right: 35px;
-    }
-
-    /* Anchor the main content to the left instead of centering it */
     .container,
     .row .container {
         margin-left: 0;
@@ -207,150 +380,47 @@ table.agenda td,table.agenda th { overflow-wrap:anywhere; }
         padding-left: 35px;
     }
 
-    /* Remove the extra inset inside the main content */
     .container > .column {
         padding-left: 0;
     }
 
-    /* The EEE 360 page has an additional centered wrapper */
     .eee360-content {
         margin-left: 0;
         margin-right: 0;
         padding-left: 0;
     }
 
-    /* Align the footer with the same left edge */
     .yw-footer {
         margin-left: 35px;
         margin-right: 0;
         padding-left: 0;
     }
 }
-/* White page background */
-html,
-body {
-    background: #fff;
-}
 
-body {
-    font-size: 16px;
-}
 
-/* Smaller page titles and a more compact title area */
-.bigtitle {
-    background: #fff;
-    min-height: 0;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid #e5e5e5;
-}
-
-.bigtitle .thetitle,
-.bigtitle .thetitle h1 {
-    font-size: 22px;
-    line-height: 1.35;
-}
-
-/* Hide "Yang Weng · Arizona State University" above titles */
-.section-eyebrow {
-    display: none;
-}
-
-/* Full-width rectangular navigation background */
-.yw-header {
-    padding: 0;
-    background: #fff;
-}
-
-#menu-placeholder {
-    min-height: 48px;
-}
-
-.yw-nav {
-    width: 100%;
-    min-height: 48px;
-    margin: 0;
-    padding: 4px 35px;
-    border: 0;
-    border-radius: 0;
-    box-shadow: none;
-    background: #8C1D40;
-}
-
-/* Main menu text: same size as the body text */
-.yw-link {
-    font-size: 16px;
-    line-height: 1.4;
-    min-height: 38px;
-    padding: 6px 10px;
-}
-
-/* Slightly smaller icons */
-.yw-icon {
-    width: 21px;
-    height: 21px;
-}
-
-/* Reduce submenu arrow button height */
-.yw-expand {
-    min-height: 38px;
-}
-
-/* Classic ASU gold for the active menu item */
-.yw-item.is-current > .yw-top {
-    background: #FFC627;
-    border-color: #FFC627;
-    color: #191919;
-    box-shadow: none;
-}
-
-.yw-item.is-current .yw-link {
-    color: #191919;
-}
-
-.yw-item.is-current .yw-icon {
-    color: #8C1D40;
-}
-
-/* Compact menu button on smaller screens */
-.yw-toggle {
-    min-height: 38px;
-    padding: 6px 10px;
-    font-size: 16px;
-    line-height: 1.4;
-}
+/* ===== Smaller screens ===== */
 
 @media (max-width: 1399px) {
+    .hiddenImage {
+        display: none !important;
+    }
+
     .yw-nav {
         padding-left: 20px;
         padding-right: 20px;
+        column-gap: 12px;
     }
-}
-/* Remove the selected item's background */
-.yw-item.is-current > .yw-top {
-    background: transparent;
-    border-color: transparent;
-    color: #fff;
-    box-shadow: none;
-}
 
-/* Keep the selected item's text and icon white */
-.yw-item.is-current .yw-link,
-.yw-item.is-current .yw-icon {
-    color: #fff;
-}
+    .yw-toggle {
+        margin-left: auto;
+    }
 
-/* Gold underline beneath the text only */
-.yw-item.is-current .yw-link > span {
-    position: relative;
-}
+    .yw-items {
+        border-top-color: #ddd;
+    }
 
-.yw-item.is-current .yw-link > span::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: -6px;
-    height: 4px;
-    background: #FFC627;
+    .bigtitle {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
 }
