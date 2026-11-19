@@ -22,7 +22,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css"
     integrity="sha512-BnbUDfEUfV0Slx6TunuB042k9tuKe3xrD6q4mg5Ed72LTgzDIcLPxg6yI2gcMFRyomt+yJJxE+zJwNmxki6/RA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="../../CSS/index.js" type="module"></script>
 
 
@@ -44,26 +43,22 @@
             padding-bottom: 16px;
         }
     </style>
+    <link rel="stylesheet" href="../../CSS/site.css">
 </head>
 
-<body>
+<body data-site-section="resources">
 
     <!-- Entire Page -->
     <div class="row">
 
         <!-- Top-bar Menu -->
-        <div id="menu-placeholder"></div>
-        <script>
-          fetch('../../menu.html')
-            .then(response => response.text())
-            .then(data => {
-              document.getElementById('menu-placeholder').innerHTML = data;
-            });
-        </script>
+        <div id="menu-placeholder"><a class="menu-loading" href="../../menu.html">Navigation</a></div>
+        <noscript><p class="site-notice">Enable JavaScript to use the shared navigation and live listings. <a href="../../menu.html">View all navigation links</a>.</p></noscript>
+        
 
         <!-- Top Big Title -->
         <div class="bigtitle" id="bigtitle">
-            <div class="thetitle">US-Israel Energy Center ICRDE Workshop
+            <div class="thetitle" role="heading" aria-level="1">US-Israel Energy Center ICRDE Workshop
                 <div class="titlebutton">
                     <a href="ICRDE_Oct2023.html"><i class="fas fa-home"></i></a>
                     <a href="ICRDE_Oct2023_Hotel.html">Hotel</a>
@@ -75,7 +70,7 @@
         </div>
 
         <!-- Image and title -->
-        <main class="row container">
+        <main id="main-content" tabindex="-1" class="row container">
             <div class="column">
             
             <div class="bigImageBack"></div>
@@ -83,14 +78,15 @@
 
             <div class="bigImageDes" style="margin-top:320px;"> 
                 <h1 style="color:white; max-width: 700px; font-size: 4rem; line-height: 4.25rem; letter-spacing: -.14rem; font-weight: 700; opacity: 1;">Agenda</h1>
-                <p>To download the PDF version of the agenda, please click the “Agenda File” button below:</p>
+                <p>The full workshop agenda is provided below.</p>
                 <br>
-                <a class="a-button" href="ICRDE-Agenda-2023.pdf" style="color: white;">Agenda File</a>
+                <a class="a-button" href="#agenda-details" style="color: white;">View Agenda</a>
+                <p class="site-notice">The downloadable agenda PDF is not included. The full agenda appears below.</p>
             </div>
 
             <br><br><br><br><br><br><br>
 
-            <div class="two-column">
+            <div class="two-column" id="agenda-details">
                 <div>
                 <p><strong>Zoom link:</strong> https://asu.zoom.us/j/8963769165</p>
                 <table class="agenda"><thead><tr><th>Time</th><th>Event</th></tr></thead></table>
@@ -834,8 +830,6 @@
     </div>
 </body>
 
-<script type="text/javascript">
-    document.getElementById("menu-Workshop").classList.add('current');
-</script>
+
 
 </html>

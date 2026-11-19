@@ -1,8 +1,11 @@
+import { siteURL } from './site-paths.js';
+
 
 let webinars;
 
 // Only For Google Drive URLs
 function getURL(path){
+    if (!path) return "";
     if (path.startsWith("http") && path.includes("drive.google.com")){
         const url = new URL(path); 
         const urlParams = new URLSearchParams(url.search);
@@ -10,11 +13,11 @@ function getURL(path){
             return `https://drive.google.com/uc?export=view&id=${urlParams.get("id")}`;
         }else{
             const id = path.split('/').slice(-2)[0];// second from last
-            return `Image/Webinar/${id}.png`;
+            return siteURL(`Image/Webinar/${id}.png`);
             // return `https://drive.google.com/uc?export=view&id=${id}`;
         }
     }else{
-        return path;
+        return siteURL(path);
     }
 }
 
@@ -33,12 +36,13 @@ Promise.all([
 })).then(value=>{
     webinars = value[0];
     renderWebinars(webinars);
-});
+}).catch(showDataError);
 
 
 function renderWebinars(webs){
 
     let container = document.querySelector('.webs');
+    container.innerHTML = '';
     
     webs.forEach(d=>{
         let html = "";
@@ -68,7 +72,7 @@ function renderWebinars(webs){
                         </div>`
         // if (d.upcoming.localeCompare("1")){
         if (d.upcoming === "0"){
-            html = html + `<h2><a style="color:black;" target='_blank' href="Links/Webinar/${htmlname}.html">${d.title}</a></h2>
+            html = html + `<h2><a style="color:black;" target='_blank' href="${siteURL(`Links/Webinar/${htmlname}.html`)}">${d.title}</a></h2>
                         <p>${d.abstract}</p>`
         }
         else{
@@ -76,18 +80,18 @@ function renderWebinars(webs){
                         <p>${d.abstract}</p>`
         }
 
-        if(d.flyer.localeCompare(";")) html = html + `<a href='${d.flyer}' target='_blank' class="flyer"><span>Flyer</span></a>`;
-        if(d.slides.localeCompare(";")) html = html + `<a href='${d.slides}' target='_blank' class="flyer"><span>Slides</span></a>`;
-        if(d.video.localeCompare(";")){
+        if(d.flyer && !/^[;；]+$/.test(d.flyer)) html = html + `<a href='${siteURL(d.flyer)}' target='_blank' class="flyer"><span>Flyer</span></a>`;
+        if(d.slides && !/^[;；]+$/.test(d.slides)) html = html + `<a href='${siteURL(d.slides)}' target='_blank' class="flyer"><span>Slides</span></a>`;
+        if(d.video && !/^[;；]+$/.test(d.video)){
             if(d.video.includes("resourcecenter.ieee-pes.org"))
-                html = html + `<a href='${d.video.split(";")[0]}' target='_blank' class="flyer"><span>Video</span></a>`;
+                html = html + `<a href='${siteURL(d.video.split(";")[0])}' target='_blank' class="flyer"><span>Video</span></a>`;
             else
-                html = html + `<a href='${d.video}' target='_blank' class="flyer"><span>Video</span></a>`;
+                html = html + `<a href='${siteURL(d.video)}' target='_blank' class="flyer"><span>Video</span></a>`;
         }
         // mark
         // if (d.upcoming.localeCompare("1")){
         if (d.upcoming === "0"){
-            html = html + `<a href='Links/Webinar/${htmlname}.html' target='_blank' class="flyer"><span>Talk Page</span></a>`;
+            html = html + `<a href='${siteURL(`Links/Webinar/${htmlname}.html`)}' target='_blank' class="flyer"><span>Talk Page</span></a>`;
         }
         html = html + `</div></div>`;
 
@@ -97,3 +101,9 @@ function renderWebinars(webs){
     });
 }
 
+
+function showDataError(error) {
+    console.error('Could not load webinar data:', error);
+    const host = document.querySelector('.webs');
+    host.innerHTML = '<p class="site-notice" role="status">The webinar listing could not load. Please check your connection and <a href="">reload this page</a>.</p>';
+}

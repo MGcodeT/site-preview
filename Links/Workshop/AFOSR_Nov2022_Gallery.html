@@ -23,28 +23,23 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css"
     integrity="sha512-BnbUDfEUfV0Slx6TunuB042k9tuKe3xrD6q4mg5Ed72LTgzDIcLPxg6yI2gcMFRyomt+yJJxE+zJwNmxki6/RA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="../../CSS/index.js" type="module"></script>
+    <link rel="stylesheet" href="../../CSS/site.css">
 </head>
 
-<body>
+<body data-site-section="resources">
 
     <!-- Entire Page -->
     <div class="row">
 
         <!-- Top-bar Menu -->
-        <div id="menu-placeholder"></div>
-        <script>
-          fetch('../../menu.html')
-            .then(response => response.text())
-            .then(data => {
-              document.getElementById('menu-placeholder').innerHTML = data;
-            });
-        </script>
+        <div id="menu-placeholder"><a class="menu-loading" href="../../menu.html">Navigation</a></div>
+        <noscript><p class="site-notice">Enable JavaScript to use the shared navigation and live listings. <a href="../../menu.html">View all navigation links</a>.</p></noscript>
+        
 
         <!-- Top Big Title -->
         <div class="bigtitle" id="bigtitle">
-            <div class="thetitle">Air Force Office of Scientific Research (AFOSR)-ASU Workshop
+            <div class="thetitle" role="heading" aria-level="1">Air Force Office of Scientific Research (AFOSR)-ASU Workshop
                 <div class="titlebutton">
                     <a href="AFOSR_Nov2022.html"><i class="fas fa-home"></i></a>
                     <a href="AFOSR_Nov2022_Agenda.html">Agenda</a>
@@ -55,7 +50,7 @@
         </div>
 
         <!-- Image and title -->
-        <main class="row container">
+        <main id="main-content" tabindex="-1" class="row container">
             <div class="column">
             
             
@@ -329,32 +324,6 @@
     </div>
 </body>
 
-<script type="text/javascript">
-    document.getElementById("menu-Workshop").classList.add('current');
 
-    const imgContent = document.querySelectorAll('.img-content-hover');
-
-    function showImgContent(e) {
-      for(var i = 0; i < imgContent.length; i++) {
-        x = e.pageX;
-        y = e.pageY;
-        imgContent[i].style.transform = `translate3d(${x}px, ${y}px, 0)`;
-      }
-    };
-
-    document.addEventListener('mousemove', showImgContent);
-
-    function light2dark(){
-        document.getElementById("light").classList.remove("active");
-        document.getElementById("dark").classList.add("active");
-        document.body.style.backgroundColor = "var(--black)";
-    }
-
-    function dark2light(){
-        document.getElementById("light").classList.add("active");
-        document.getElementById("dark").classList.remove("active");
-        document.body.style.backgroundColor = "var(--white)";
-    }
-</script>
 
 </html>

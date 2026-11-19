@@ -39,37 +39,27 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css"
     integrity="sha512-BnbUDfEUfV0Slx6TunuB042k9tuKe3xrD6q4mg5Ed72LTgzDIcLPxg6yI2gcMFRyomt+yJJxE+zJwNmxki6/RA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="CSS/index.js" type="module"></script>
+    <link rel="stylesheet" href="CSS/site.css">
 </head>
 
-<body>
+<body data-site-section="home">
 
     <!-- Entire Page -->
     <div class="row">
 
         <!-- Top-bar Menu -->
-        <div id="menu-placeholder"></div>
-        <script>
-            fetch("../../menu.html")
-                .then(response => {
-                    if (!response.ok) throw new Error("Could not load menu.html");
-                    return response.text();
-                })
-                .then(html => {
-                    document.getElementById("menu-placeholder").innerHTML = html;
-                    document.getElementById("menu-home").classList.add("current");
-                })
-                .catch(error => console.error("Menu loading error:", error));
-        </script>
+        <div id="menu-placeholder"><a class="menu-loading" href="menu.html">Navigation</a></div>
+        <noscript><p class="site-notice">Enable JavaScript to use the shared navigation and live listings. <a href="menu.html">View all navigation links</a>.</p></noscript>
+        
 
         <!-- Top Big Title -->
         <div class="bigtitle" id="bigtitle">
-            <div class="thetitle"><h1>Yang Weng — Associate Professor, Arizona State University</h1></div>
+            <div class="thetitle" role="heading" aria-level="1"><h1>Yang Weng — Associate Professor, Arizona State University</h1></div>
         </div>
 
         <!-- Image and title -->
-        <main class="row container">
+        <main id="main-content" tabindex="-1" class="row container">
             <div class="column">
              <div class="myinfo">
                 <div class="myphoto"></div>
@@ -82,9 +72,9 @@
 
             <p>This is the official GitHub Pages site of Prof. Yang Weng (ASU).</p>
 
-            <div class="content-title">
+            <h2 class="content-title" id="research-themes">
                 Research Interests
-            </div>
+            </h2>
             <p>Sustainability, security, power systems, machine learning, and convex optimization</p>
 
 
@@ -98,9 +88,9 @@
 
 
             <!-- News -->
-            <div class="content-title">
+            <h2 class="content-title" id="news">
                 News
-            </div>
+            </h2>
         
 
             
@@ -245,9 +235,9 @@
 
 
 
-            <div class="content-title">
+            <h2 class="content-title" id="open-positions">
                 Openings
-            </div>
+            </h2>
             <p>
             <b>I am looking for postdoctoral and Ph.D. students</b> with self-motivation and strong interests in interdisciplinary research of smart grid, renewable integration, and machine learning. ASU is the lead university in the Power Systems Engineering Research Center (<a href="https://pserc.wisc.edu/membership-map/">PSERC</a>), which includes 13 universities and 39 industrial members. U.S. News & World Report ranked ASU <font color="var(--asu-red)">1st</font> among the "Most Innovative Schools" in America consistently for the past 9 years <a href="https://news.asu.edu/20230917-university-news-asu-no-1-innovation-nine-years-us-news-world-report#:~:text=%E2%80%9CBolstered%20by%20collaboration%20across%20disciplines,U.S.%20News%20%26%20World%20Report%20magazine.">(2015-2023)</a>. Its ECEE department is <font color="var(--asu-red)">ranked 27th</font> in the U.S. in 2021. ASU locates near the City of Phoenix, AZ. Phoenix is the state capital and the <font color="var(--asu-red)">5th</font> most populous city in the United State.
             </p>

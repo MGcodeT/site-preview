@@ -1,48 +1,73 @@
-<header>
-        <nav class="menu" aria-label="Primary navigation" id="site-nav-links">
-            <div class="menu-image"><a href="http://www.asu.edu/"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b3/Arizona_State_University_logo.svg" align="center" alt="ASU"/></a></div>
-
-            <button type="button" class="menu-toggle" aria-label="Open navigation menu" aria-controls="site-nav-links" aria-expanded="false">&#9776; Menu</button>
-
-            <div class="menu-item" id="menu-home"><span><a class="firstlayer" href="https://yweng3.github.io/index.html">Home</a></span></div>
-
-            <div class="menu-item dropdown" id="menu-Yang">
-                <span class="dropdown-trigger" role="button" tabindex="0" aria-expanded="false">Yang Weng</span>
-                <i class="fas fa-caret-down"></i>
-                <div class="dropdown-content" style="left:0;">
-                    <a href="https://yweng3.github.io/Links/YangWeng/education.html">Education</a>
-                    <a href="https://yweng3.github.io/Links/YangWeng/teaching.html">Teaching</a>
-                    <a href="https://yweng3.github.io/Links/YangWeng/contact.html">Contact</a>
-                </div>
-            </div>
-
-            <div class="menu-item" id="menu-publication"><span><a class="firstlayer" href="https://yweng3.github.io/publication.html">Publications</a></span></div>
-            <div class="menu-item" id="menu-award"><span><a class="firstlayer" href="https://yweng3.github.io/Links/YangWeng/award.html">Award/Service</a></span></div>
-
-            <div class="menu-item dropdown" id="menu-group">
-                <span class="dropdown-trigger" role="button" tabindex="0" aria-expanded="false">Group</span>
-                <i class="fas fa-caret-down"></i>
-                <div class="dropdown-content" style="left:0;">
-                    <a href="https://yweng3.github.io/Links/Group/group.html">Group Members</a>
-                    <a href="https://yweng3.github.io/Links/Group/facility.html">Facilities</a>
-                    <a href="https://yweng3.github.io/Links/Group/software.html">Products</a>
-                    <a href="https://yweng3.github.io/Links/Group/outreach.html">Outreach</a>
-                    <a href="https://yweng3.github.io/Links/Group/source.html">Data Sources</a>
-                </div>
-            </div>
-
-            <div class="menu-item" id="menu-consurtium"><span><a class="firstlayer" href="https://yweng3.github.io/consortium.html">Consortium</a></span></div>
-            
-            <div class="menu-item dropdown" id="menu-Workshop">
-                <span class="dropdown-trigger" role="button" tabindex="0" aria-expanded="false">Workshop</span>
-                <i class="fas fa-caret-down"></i>
-                <div class="dropdown-content" style="left:0;">
-                    <a href="https://yweng3.github.io/Links/Workshop/ICRDE_Oct2023.html">Energy Center Workshop</a>
-                    <a href="https://yweng3.github.io/Links/Workshop/AFOSR_Nov2022.html">AFOSR-ASU Workshop</a>
-                </div>
-            </div>
-
-            <div class="menu-item" id="menu-webinar"><span><a class="firstlayer" href="https://yweng3.github.io/webinar.html">Webinar</a></span></div>
-
-        </nav>
-        </header>
+<!-- Edit this file once to update navigation across every page. Links are relative to the site root. -->
+<header class="yw-header"><a class="yw-skip" href="#main-content">Skip to content</a><nav class="yw-nav" aria-label="Primary navigation">
+<a class="yw-brand" href="index.html">Yang Weng</a>
+<button class="yw-toggle" type="button" aria-expanded="false" aria-controls="yw-nav-items" aria-label="Open navigation menu"><span aria-hidden="true">☰</span> Menu</button>
+<ul class="yw-items" id="yw-nav-items">
+<li class="yw-item" data-section="home"><div class="yw-top"><a class="yw-link" href="index.html"><svg class="yw-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 11 9-8 9 8M5 10v11h14V10M9 21v-8h6v8"/></svg><span>Home</span></a>
+</div>
+</li>
+<li class="yw-item" data-section="research"><div class="yw-top"><a class="yw-link" href="research.html"><svg class="yw-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3h6M10 3v7L4 20q0 1 2 1h12q2 0 2-1l-6-10V3M7 15h10"/></svg><span>Research</span></a>
+<button class="yw-expand" type="button" aria-label="Research submenu" aria-controls="yw-sub-research" aria-expanded="false"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="m4 6 4 4 4-4"/></svg></button>
+</div>
+<ul class="yw-sub" id="yw-sub-research">
+<li><a href="research.html#research-themes">Research Themes</a></li>
+<li><a href="Links/Research/featured-projects.html">Featured Projects</a></li>
+<li><a href="consortium.html">Consortium / Collaborations</a></li>
+<li><a href="Links/Group/facility.html">Lab Facilities</a></li>
+</ul>
+</li>
+<li class="yw-item" data-section="publications"><div class="yw-top"><a class="yw-link" href="publication.html"><svg class="yw-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2h9l4 4v16H6zM14 2v5h5M9 11h7M9 15h7M9 18h5"/></svg><span>Publications</span></a>
+<button class="yw-expand" type="button" aria-label="Publications submenu" aria-controls="yw-sub-publications" aria-expanded="false"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="m4 6 4 4 4-4"/></svg></button>
+</div>
+<ul class="yw-sub" id="yw-sub-publications">
+<li><a href="selected-publications.html">Selected Publications</a></li>
+<li><a href="publication.html">All Publications</a></li>
+</ul>
+</li>
+<li class="yw-item" data-section="webinars"><div class="yw-top"><a class="yw-link" href="webinar.html"><svg class="yw-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m10 8 6 4-6 4z"/></svg><span>Webinars</span></a>
+</div>
+</li>
+<li class="yw-item" data-section="group"><div class="yw-top"><a class="yw-link" href="Links/Group/group.html"><svg class="yw-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="7" r="3"/><path d="M6 21v-3a6 6 0 0 1 12 0v3M5 4a3 3 0 0 0 0 6M19 4a3 3 0 0 1 0 6M2 19v-3a4 4 0 0 1 3-4M22 19v-3a4 4 0 0 0-3-4"/></svg><span>Group</span></a>
+<button class="yw-expand" type="button" aria-label="Group submenu" aria-controls="yw-sub-group" aria-expanded="false"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="m4 6 4 4 4-4"/></svg></button>
+</div>
+<ul class="yw-sub" id="yw-sub-group">
+<li><a href="Links/Group/group.html">Current Members</a></li>
+<li><a href="Links/Group/group.html#postdocs">Postdocs</a></li>
+<li><a href="Links/Group/group.html#phd-students">PhD Students</a></li>
+<li><a href="Links/Group/group.html#alumni">Alumni</a></li>
+<li><a href="index.html#open-positions">Open Positions</a></li>
+</ul>
+</li>
+<li class="yw-item" data-section="teaching"><div class="yw-top"><a class="yw-link" href="teaching.html"><svg class="yw-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m2 8 10-5 10 5-10 5zM6 10v7q6 5 12 0v-7M22 8v9"/></svg><span>Teaching</span></a>
+<button class="yw-expand" type="button" aria-label="Teaching submenu" aria-controls="yw-sub-teaching" aria-expanded="false"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="m4 6 4 4 4-4"/></svg></button>
+</div>
+<ul class="yw-sub" id="yw-sub-teaching">
+<li><a href="Links/YangWeng/teaching.html">Courses</a></li>
+<li><a href="Links/Software/software_EEE360Lab.html">Teaching Labs</a></li>
+<li><a href="Links/Teaching/demos.html">Educational Software / Demos</a></li>
+<li><a href="Links/Teaching/student-resources.html">Student Resources</a></li>
+</ul>
+</li>
+<li class="yw-item" data-section="about"><div class="yw-top"><a class="yw-link" href="about.html"><svg class="yw-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="7" r="4"/><path d="M4 22v-3a8 8 0 0 1 16 0v3z"/></svg><span>About</span></a>
+<button class="yw-expand" type="button" aria-label="About submenu" aria-controls="yw-sub-about" aria-expanded="false"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="m4 6 4 4 4-4"/></svg></button>
+</div>
+<ul class="yw-sub" id="yw-sub-about">
+<li><a href="Links/YangWeng/education.html">Bio</a></li>
+<li><a href="Links/YangWeng/cv.html">CV</a></li>
+<li><a href="Links/YangWeng/award.html#awards">Awards &amp; Honors</a></li>
+<li><a href="Links/YangWeng/award.html#professional-service">Professional Service</a></li>
+<li><a href="Links/YangWeng/contact.html">Contact</a></li>
+</ul>
+</li>
+<li class="yw-item" data-section="resources"><div class="yw-top"><a class="yw-link" href="resources.html"><svg class="yw-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m2 7 10-5 10 5-10 5zM2 12l10 5 10-5M2 17l10 5 10-5"/></svg><span>Resources</span></a>
+<button class="yw-expand" type="button" aria-label="Resources submenu" aria-controls="yw-sub-resources" aria-expanded="false"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="m4 6 4 4 4-4"/></svg></button>
+</div>
+<ul class="yw-sub" id="yw-sub-resources">
+<li><a href="Links/Group/software.html">Software Tools</a></li>
+<li><a href="Links/Group/source.html">Datasets / Data Sources</a></li>
+<li><a href="workshops.html">Workshops</a></li>
+<li><a href="Links/Group/outreach.html">Outreach &amp; Media</a></li>
+<li><a href="index.html#news">News / Highlights</a></li>
+</ul>
+</li>
+</ul></nav></header>

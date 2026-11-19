@@ -18,7 +18,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css"
           integrity="sha512-BnbUDfEUfV0Slx6TunuB042k9tuKe3xrD6q4mg5Ed72LTgzDIcLPxg6yI2gcMFRyomt+yJJxE+zJwNmxki6/RA=="
           crossorigin="anonymous" referrerpolicy="no-referrer">
-    <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="../../CSS/index.js" type="module"></script>
     <style>
         /* EEE 360-specific styles, scoped to this page to preserve existing site CSS. */
@@ -126,31 +125,21 @@
             .eee360-card:hover { transform: none; }
         }
     </style>
+    <link rel="stylesheet" href="../../CSS/site.css">
 </head>
-<body>
+<body data-site-section="teaching">
     <div class="row">
         <!-- Load the same global menu used by the other site pages. -->
-        <div id="menu-placeholder"></div>
-        <script>
-            fetch("../../menu.html")
-                .then(response => {
-                    if (!response.ok) throw new Error("Could not load menu.html");
-                    return response.text();
-                })
-                .then(html => {
-                    document.getElementById("menu-placeholder").innerHTML = html;
-                    const groupMenu = document.getElementById("menu-group");
-                    if (groupMenu) groupMenu.classList.add("current");
-                })
-                .catch(error => console.error("Menu loading error:", error));
-        </script>
+        <div id="menu-placeholder"><a class="menu-loading" href="../../menu.html">Navigation</a></div>
+        <noscript><p class="site-notice">Enable JavaScript to use the shared navigation and live listings. <a href="../../menu.html">View all navigation links</a>.</p></noscript>
+        
 
         <!-- Page title, matching the original Products page structure. -->
         <div class="bigtitle" id="bigtitle">
-            <div class="thetitle">EEE 360 Virtual Labs</div>
+            <div class="thetitle" role="heading" aria-level="1">EEE 360 Virtual Labs</div>
         </div>
 
-        <main class="row container eee360-container">
+        <main id="main-content" tabindex="-1" class="row container eee360-container">
             <div class="column eee360-column">
                 <div class="eee360-content">
 

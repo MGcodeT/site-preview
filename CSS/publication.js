@@ -1,3 +1,5 @@
+import { siteURL } from './site-paths.js';
+
 
 let publications;
 let condition = null;
@@ -45,6 +47,7 @@ let PaperCate = {
 
 // Only For Google Drive URLs
 function getURL(path){
+    if (!path) return "";
     if (path.startsWith("http") && path.includes("drive.google.com")){
         const url = new URL(path); 
         const urlParams = new URLSearchParams(url.search);
@@ -52,15 +55,16 @@ function getURL(path){
             return `https://drive.google.com/uc?export=view&id=${urlParams.get("id")}`;
         }else{
             const id = path.split('/').slice(-2)[0];// second from last
-            return `Image/Publication/${id}.png`;
+            return siteURL(`Image/Publication/${id}.png`);
             // return `https://drive.google.com/uc?export=view&id=${id}`;
         }
     }else{
-        return path;
+        return siteURL(path);
     }
 }
 
 function getURL2(path){
+    if (!path) return "";
     if (path.startsWith("http") && path.includes("drive.google.com")){
         const url = new URL(path); 
         const urlParams = new URLSearchParams(url.search);
@@ -71,16 +75,18 @@ function getURL2(path){
             return `https://drive.google.com/uc?export=view&id=${id}`;
         }
     }else{
-        return path;
+        return siteURL(path);
     }
 }
 
 
-function getUniqueId(d){
-    let uniqueid = d.authors.split(". ")[1] + d.year.substring(2, 4) + d.venue.substring(0,6) + d.title.substring(0,6);
-    uniqueid = uniqueid.replaceAll(" ", "").replace(",","").replace("-","").replace(":","")
-    return uniqueid;
+function getUniqueId(d) {
+    const key = [d.authors, d.year, d.venue, d.title].join('|');
+    let hash = 2166136261;
+    for (let i = 0; i < key.length; i++) hash = Math.imul(hash ^ key.charCodeAt(i), 16777619);
+    return 'bib-' + (hash >>> 0).toString(16);
 }
+
 
 Promise.all([
     'https://docs.google.com/spreadsheets/d/e/2PACX-1vTPMWaiCEPwokej5W3_mN6MLWhnTjQPpFjnQS7iNo8oDyRUNO1y80T8-Pqwq7x7cUL19ji652qomLOv/pub?output=csv',
@@ -99,10 +105,11 @@ Promise.all([
     let filter = document.querySelector('.chip.selected');
     condition = filter.dataset.cond;
     renderPubs(publications, condition);
-});
+}).catch(showDataError);
 
 
 function renderPubs(pubs, cond){
+    if (!pubs) return;
     let filtered;
     let by_areas = false;
     switch(cond){
@@ -142,6 +149,9 @@ function renderPubs(pubs, cond){
         default:
             filtered = pubs;
     }
+
+    const query = document.querySelector('.search input[name="publication"]').value.trim().toLowerCase();
+    if (query) filtered = filtered.filter(d => d.title.toLowerCase().includes(query));
 
     // Filter by Time
     let byTime = document.querySelector('#by-time');
@@ -222,7 +232,7 @@ function renderPubs(pubs, cond){
                     <div class='pub-materials' role="list" aria-label="Publication Materials">
                         ${renderPubMaterials(d)}
                     </div>
-                    <div class='bibContent' id=${getUniqueId(d)}>
+                    <div class='bibContent' id="${getUniqueId(d)}">
                         <div class="copybib">
                             <i class="fas fa-copy" style="margin-top: 4px; color: black;"></i>
                             <button class="copy-button" onclick="copy2board(this)">Copy Bibtex</button>
@@ -266,10 +276,13 @@ function renderPubMaterials(d){
     if (d.bibtex) {
         html += `<div class='item' role='listitem'>
         <i class='far fa-file-alt'></i>
-        <a role="button" onclick='toggleDiv(${getUniqueId(d)})'>BibTeX</a>
+        <a role="button" tabindex="0" onclick='toggleDiv(document.getElementById("${getUniqueId(d)}"))' onkeydown='if(event.key==="Enter"||event.key===" "){event.preventDefault();this.click();}'>BibTeX</a>
     </div>`
     }
 
+    for (const [field, label] of [['code','Code'], ['data','Data'], ['slides','Slides'], ['video','Video'], ['supplement','Supplement'], ['website','Website']]) {
+        if (d[field] && /^(https?:|\/|Image\/|Links\/)/i.test(d[field])) html += generate('fas fa-link', siteURL(d[field]), label);
+    }
     return html;
 }
 
@@ -289,19 +302,12 @@ document.querySelector('#by-time').addEventListener('change', function(){
     renderPubs(publications, condition);
 });
 
-// User Search
-let pubSearch = document.querySelector('.search input[name="publication"');
-pubSearch.addEventListener('input', function(event){
-    if (this.value!=''){
-        let filtered = publications.filter(d=>{
-            return d.title.toLowerCase().includes(this.value.toLowerCase());
-        })
-        renderPubs(filtered);
-    }else{
-        renderPubs(publications);
-    }
-});
+// User Search: keep the active type/topic filter and year grouping.
+const pubSearch = document.querySelector('.search input[name="publication"]');
+pubSearch.addEventListener('input', () => renderPubs(publications, condition));
 
-
-
-
+function showDataError(error) {
+    console.error('Could not load publication data:', error);
+    const host = document.querySelector('.pubs');
+    host.innerHTML = '<p class="site-notice" role="status">The publication listing could not load. Please check your connection and <a href="">reload this page</a>.</p>';
+}
