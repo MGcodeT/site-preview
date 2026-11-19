@@ -1,6 +1,104 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Curriculum Vitae | Yang Weng | ASU</title>
-<link rel="stylesheet" href="../../CSS/homepage.css"><link rel="stylesheet" href="../../CSS/index.css"><link rel="stylesheet" href="../../CSS/site.css"><script type="module" src="../../CSS/index.js"></script></head>
-<body data-site-section="about"><div id="menu-placeholder"><a class="menu-loading" href="../../menu.html">Navigation</a></div><noscript><p class="site-notice">Enable JavaScript for shared navigation. <a href="../../menu.html">View all navigation links</a>.</p></noscript>
-<div class="bigtitle"><div class="thetitle"><p class="section-eyebrow">Yang Weng · Arizona State University</p><h1>Curriculum Vitae</h1></div></div>
-<main id="main-content" tabindex="-1" class="container directory-page"><div class="column"><p class="page-lead">Yang Weng · Curriculum Vitae</p><section class="placeholder-panel"><span class="status-label">Content forthcoming</span><h2>Content to be added.</h2><p>This section is reserved for future updates.</p></section></div></main></body></html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Curriculum vitae of Yang Weng, Arizona State University.">
+    <title>Curriculum Vitae | Yang Weng | ASU</title>
+    <link rel="stylesheet" href="../../CSS/homepage.css">
+    <link rel="stylesheet" href="../../CSS/index.css">
+    <link rel="stylesheet" href="../../CSS/site.css">
+    <script type="module" src="../../CSS/index.js"></script>
+    <style>
+        /* Page-local styles; shared navigation and title styling stay in site.css. */
+        #main-content.cv-page {
+            display: block;
+            width: calc(100% - 70px);
+            max-width: 1330px;
+            margin: 32px 0 56px 35px;
+            padding: 0;
+            color: #252329;
+            font-size: 16px;
+            line-height: 1.65;
+        }
+        .cv-page .cv-toolbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 16px 24px;
+            margin: 0 0 20px;
+        }
+        .cv-page .cv-toolbar h2 {
+            margin: 0;
+            font: 700 22px/1.35 Georgia, "Times New Roman", serif;
+            color: #8c1d40;
+        }
+        .cv-page .cv-toolbar p { margin: 4px 0 0; }
+        .cv-page a { color: #8c1d40; text-underline-offset: 3px; }
+        .cv-page a:hover { border-bottom: 0; text-decoration: underline; }
+        .cv-page .cv-open {
+            display: inline-block;
+            padding: 9px 16px;
+            border: 1px solid #8c1d40;
+            border-radius: 3px;
+            background: #8c1d40;
+            color: #fff;
+            font: 400 16px/1.5 Arial, Helvetica, sans-serif;
+            text-decoration: none;
+        }
+        .cv-page .cv-open:hover {
+            background: #6f1733;
+            color: #fff;
+            border: 1px solid #6f1733;
+            text-decoration: none;
+        }
+        .cv-page a:focus-visible { outline: 3px solid #8c1d40; outline-offset: 4px; }
+        .cv-page .cv-viewer {
+            border: 1px solid #dedbde;
+            background: #f5f5f5;
+            overflow: hidden;
+        }
+        .cv-page iframe {
+            display: block;
+            width: 100%;
+            height: 80vh;
+            min-height: 560px;
+            max-height: 1100px;
+            border: 0;
+            background: #fff;
+        }
+        .cv-page .cv-help { margin: 16px 0 0; color: #625e63; }
+        @media (max-width: 1399px) {
+            #main-content.cv-page { width: calc(100% - 40px); margin-left: 20px; }
+        }
+        @media (max-width: 650px) {
+            #main-content.cv-page { margin-top: 24px; }
+            .cv-page .cv-toolbar { align-items: flex-start; flex-direction: column; }
+            .cv-page iframe { height: 70vh; min-height: 440px; }
+        }
+    </style>
+</head>
+<body data-site-section="about">
+    <div id="menu-placeholder"><a class="menu-loading" href="../../menu.html">Navigation</a></div>
+    <noscript><p class="site-notice">JavaScript is needed for the shared navigation. <a href="../../menu.html">View navigation links</a>.</p></noscript>
+    <div class="bigtitle"><div class="thetitle"><h1>Curriculum Vitae</h1></div></div>
+    <main id="main-content" tabindex="-1" class="cv-page">
+        <div class="cv-toolbar">
+            <div><h2>Yang Weng</h2><p>Arizona State University</p></div>
+            <a class="cv-open" href="https://docs.google.com/document/d/1y7VqKGSAChs_6x3AQBi7rfp2kALoyW-l/edit?usp=drive_link&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener noreferrer">Open CV in Google Drive</a>
+        </div>
+        <!-- MAINTENANCE:
+             This page displays the existing Word file in Google Drive.
+             Updating that same file updates this viewer; no local CV upload is needed.
+             If the file is replaced with a new Drive ID, update the iframe src and BOTH links.
+             For a public website, check the document's intended sharing permissions in Drive.
+             Opening the link in a new tab does not grant visitors editing permission.
+        -->
+        <div class="cv-viewer">
+            <iframe src="https://drive.google.com/file/d/1y7VqKGSAChs_6x3AQBi7rfp2kALoyW-l/preview" title="Yang Weng’s curriculum vitae — Google Drive document preview" allowfullscreen></iframe>
+        </div>
+        <p class="cv-help">If the preview does not load, <a href="https://docs.google.com/document/d/1y7VqKGSAChs_6x3AQBi7rfp2kALoyW-l/edit?usp=drive_link&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener noreferrer">open the CV in Google Drive</a> (new tab).</p>
+    </main>
+</body>
+</html>
