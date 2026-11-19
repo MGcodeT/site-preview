@@ -49,7 +49,7 @@ button,input { font:inherit; }
 .container,.row .container { display:flex; width:100%; max-width:1400px; margin:32px auto 56px; padding:0 24px; min-width:0; }
 .column { min-width:0; padding:0 12px; }
 .container a:hover { border-bottom:0; text-decoration:underline; }
-.content-title { display:block; position:relative; font:700 21px/1.4 Georgia,serif; color:var(--yw-maroon); margin:32px 0 16px; padding:0 0 9px; border-bottom:2px solid #d6b36a; width:100%; }
+.content-title { display:block; position:relative; font:700 21px/1.4 Georgia,serif; color:var(--yw-maroon); margin:32px 0 16px; padding:0 0 9px; border-bottom:4px solid #8C1D40; width:100%; }
 .content-title::after { content:none; }
 .container li { margin-top:0; margin-bottom:9px; }
 .myinfo { grid-template-columns:150px minmax(0,1fr); gap:25px; align-items:center; background:#fff; padding:22px; border:1px solid var(--yw-line); border-radius:8px; }
@@ -337,8 +337,8 @@ body {
 .bigtitle .thetitle,
 .bigtitle .thetitle h1 {
     color: #fff;
-    font-size: 22px;
-    line-height: 1.35;
+    font-size: 20px;
+    line-height: 1.0;
 }
 
 /* Hide the extra institutional line above page titles */

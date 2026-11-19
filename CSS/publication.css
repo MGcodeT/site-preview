@@ -167,44 +167,15 @@
 
 
 /* For title before each category */
-.title{
-  width :100%;
-  margin:0;
-  font-weight: 100;
-  position: relative;
-  display: table;
-  padding:0 5px;
-  
-}
-.title::after {
-  content: '';
-  background-color: var(--asu-yellow);
-  height: 20%;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  z-index: -1;
-}
-
-.title2{
-  width :100%;
-  margin:0;
-  font-weight: 100;
-  position: relative;
-  display: table;
-  padding:0 5px;
-  
-}
-.title2::after {
-  content: '';
-  background-color: var(--asu-red);
-  height: 20%;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  z-index: -1;
+/* Publication category and year headings */
+.title,
+.title2 {
+    width: 100%;
+    margin: 0;
+    font-weight: 100;
+    display: block;
+    padding: 0 5px 9px;
+    border-bottom: 3px solid #8C1D40;
 }
 
 /* For bibtext content */
