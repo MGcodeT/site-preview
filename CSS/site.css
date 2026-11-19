@@ -326,3 +326,31 @@ body {
         padding-right: 20px;
     }
 }
+/* Remove the selected item's background */
+.yw-item.is-current > .yw-top {
+    background: transparent;
+    border-color: transparent;
+    color: #fff;
+    box-shadow: none;
+}
+
+/* Keep the selected item's text and icon white */
+.yw-item.is-current .yw-link,
+.yw-item.is-current .yw-icon {
+    color: #fff;
+}
+
+/* Gold underline beneath the text only */
+.yw-item.is-current .yw-link > span {
+    position: relative;
+}
+
+.yw-item.is-current .yw-link > span::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -6px;
+    height: 4px;
+    background: #FFC627;
+}
