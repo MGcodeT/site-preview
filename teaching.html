@@ -1,6 +1,176 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Teaching | Yang Weng | ASU</title>
-<link rel="stylesheet" href="CSS/homepage.css"><link rel="stylesheet" href="CSS/index.css"><link rel="stylesheet" href="CSS/site.css"><script type="module" src="CSS/index.js"></script></head>
-<body data-site-section="teaching"><div id="menu-placeholder"><a class="menu-loading" href="menu.html">Navigation</a></div><noscript><p class="site-notice">Enable JavaScript for shared navigation. <a href="menu.html">View all navigation links</a>.</p></noscript>
-<div class="bigtitle"><div class="thetitle"><p class="section-eyebrow">Yang Weng · Arizona State University</p><h1>Teaching</h1></div></div>
-<main id="main-content" tabindex="-1" class="container directory-page"><div class="column"><p class="page-lead">Courses, laboratories, and resources for learning power systems.</p><div class="section-grid"><a class="section-card" href="Links/YangWeng/teaching.html"><h2>Courses</h2><p>Teaching at Arizona State University, Stanford University, and Carnegie Mellon University.</p><span class="card-arrow" aria-hidden="true">↗</span></a><a class="section-card" href="Links/Software/software_EEE360Lab.html"><h2>Teaching Labs</h2><p>EEE 360 virtual labs, from AC circuits to synchronous generators.</p><span class="card-arrow" aria-hidden="true">↗</span></a><a class="section-card" href="Links/Teaching/demos.html"><h2>Educational Software / Demos</h2><p>Explore existing software and lab demonstrations.</p><span class="card-arrow" aria-hidden="true">↗</span></a><a class="section-card" href="Links/Teaching/student-resources.html"><h2>Student Resources</h2><p>Learning materials and data sources.</p><span class="card-arrow" aria-hidden="true">↗</span></a></div></div></main></body></html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Explore Yang Weng’s courses, teaching laboratories, and educational software at Arizona State University.">
+    <title>Teaching | Yang Weng | ASU</title>
+    <link rel="stylesheet" href="CSS/homepage.css">
+    <link rel="stylesheet" href="CSS/index.css">
+    <link rel="stylesheet" href="CSS/site.css">
+    <script type="module" src="CSS/index.js"></script>
+    <style>
+        /* Page-local styles. Shared navigation and title remain controlled by site.css. */
+        #main-content.teaching-page {
+            display: block;
+            width: calc(100% - 70px);
+            max-width: 1330px;
+            margin: 32px 0 56px 35px;
+            padding: 0;
+            color: #252329;
+            font: 16px/1.65 Georgia, "Times New Roman", serif;
+        }
+        .teaching-page *, .teaching-page *::before, .teaching-page *::after { box-sizing: border-box; }
+        .teaching-page .teaching-intro {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 12px 32px;
+            padding-bottom: 27px;
+            border-bottom: 3px solid #8c1d40;
+        }
+        .teaching-page .teaching-intro h2 {
+            margin: 0;
+            font: 700 25px/1.35 Georgia, "Times New Roman", serif;
+            color: #8c1d40;
+        }
+        .teaching-page .teaching-intro p { margin: 0; color: #625e63; }
+        .teaching-page .teaching-entry {
+            display: grid;
+            grid-template-columns: 88px minmax(0, 1fr) 195px;
+            align-items: center;
+            gap: 30px;
+            padding: 34px 0;
+            border-bottom: 1px solid #dedbde;
+        }
+        .teaching-page .teaching-icon {
+            width: 88px;
+            height: 88px;
+            display: grid;
+            place-items: center;
+            position: relative;
+            background: #f5f5f6;
+            border-radius: 8px;
+            color: #8c1d40;
+        }
+        .teaching-page .teaching-icon::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 30px;
+            right: 30px;
+            height: 3px;
+            background: #ffc627;
+        }
+        .teaching-page .teaching-icon svg { display: block; width: 46px; height: 46px; }
+        .teaching-page .teaching-copy h2 {
+            margin: 0 0 9px;
+            font: 700 24px/1.35 Georgia, "Times New Roman", serif;
+            color: #8c1d40;
+        }
+        .teaching-page .teaching-copy p { margin: 0; max-width: 730px; }
+        .teaching-page .teaching-topics {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px 18px;
+            margin: 13px 0 0;
+            padding: 0;
+            list-style: none;
+            color: #625e63;
+            font: 14px/1.5 Arial, Helvetica, sans-serif;
+        }
+        .teaching-page .teaching-topics li { margin: 0; padding-left: 10px; border-left: 2px solid #c5b8be; }
+        .teaching-page .teaching-action {
+            display: block;
+            width: 100%;
+            padding: 10px 15px;
+            border: 1px solid #8c1d40;
+            border-radius: 3px;
+            color: #8c1d40;
+            background: #fff;
+            text-align: center;
+            text-decoration: none;
+            font: 400 16px/1.5 Arial, Helvetica, sans-serif;
+            transition: color .15s ease, background-color .15s ease;
+        }
+        .teaching-page .teaching-action:hover {
+            background: #8c1d40;
+            color: #fff;
+            border: 1px solid #8c1d40;
+            text-decoration: none;
+        }
+        .teaching-page .teaching-action:focus-visible { outline: 3px solid #8c1d40; outline-offset: 5px; }
+        @media (max-width: 1399px) {
+            #main-content.teaching-page { width: calc(100% - 40px); margin-left: 20px; }
+        }
+        @media (max-width: 900px) {
+            .teaching-page .teaching-entry { grid-template-columns: 72px minmax(0, 1fr); gap: 16px 24px; }
+            .teaching-page .teaching-icon { width: 72px; height: 72px; align-self: start; }
+            .teaching-page .teaching-action { grid-column: 2; width: fit-content; min-width: 175px; }
+        }
+        @media (max-width: 650px) {
+            #main-content.teaching-page { margin-top: 24px; }
+            .teaching-page .teaching-intro { padding-bottom: 22px; }
+            .teaching-page .teaching-intro h2 { font-size: 23px; }
+            .teaching-page .teaching-entry { grid-template-columns: 48px minmax(0, 1fr); gap: 16px; padding: 26px 0; }
+            .teaching-page .teaching-icon { width: 48px; height: 54px; border-radius: 4px; }
+            .teaching-page .teaching-icon svg { width: 31px; height: 31px; }
+            .teaching-page .teaching-icon::after { left: 14px; right: 14px; }
+            .teaching-page .teaching-copy h2 { font-size: 22px; }
+            .teaching-page .teaching-topics { gap: 8px 14px; }
+        }
+        @media (prefers-reduced-motion: reduce) { .teaching-page .teaching-action { transition: none; } }
+    </style>
+</head>
+<body data-site-section="teaching">
+    <div id="menu-placeholder"><a class="menu-loading" href="menu.html">Navigation</a></div>
+    <noscript><p class="site-notice">JavaScript is needed for the shared navigation. <a href="menu.html">View navigation links</a>.</p></noscript>
+    <div class="bigtitle"><div class="thetitle"><h1>Teaching</h1></div></div>
+    <main id="main-content" tabindex="-1" class="teaching-page">
+        <div class="teaching-intro">
+            <h2>From understanding to application.</h2>
+            <p>Courses, virtual laboratories, and tools for learning power systems.</p>
+        </div>
+
+        <!-- COURSES: The teaching history remains on the existing course page. -->
+        <section class="teaching-entry" aria-labelledby="courses-title">
+            <div class="teaching-icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M24 12C18 8 10 8 5 10V37C11 35 18 35 24 39C30 35 37 35 43 37V10C38 8 30 8 24 12ZM24 12V39"/><path d="M11 17C14 16 17 17 19 18M11 23C14 22 17 23 19 24M29 18C32 17 35 16 38 17M29 24C32 23 35 22 38 23"/></svg>
+            </div>
+            <div class="teaching-copy">
+                <h2 id="courses-title">Courses</h2>
+                <p>Explore teaching in power systems, circuits, and machine learning, with course history at Arizona State University, Stanford University, and Carnegie Mellon University.</p>
+                <ul class="teaching-topics" aria-label="Course topics"><li>Power systems</li><li>Machine learning</li><li>Circuits</li></ul>
+            </div>
+            <a class="teaching-action" href="Links/YangWeng/teaching.html">Explore courses</a>
+        </section>
+
+        <!-- LABORATORIES: Keep this link connected to the existing EEE 360 lab collection. -->
+        <section class="teaching-entry" aria-labelledby="labs-title">
+            <div class="teaching-icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6H30M20 6V19L8 37Q6 42 12 42H36Q42 42 40 37L28 19V6M14 29H34"/><circle cx="19" cy="34" r="1.8"/><circle cx="28" cy="37" r="1.5"/><path d="M23 24H25"/></svg>
+            </div>
+            <div class="teaching-copy">
+                <h2 id="labs-title">Teaching Labs</h2>
+                <p>Connect classroom concepts with the EEE 360 virtual laboratory collection, from AC circuits and transformers to electrical machines.</p>
+                <ul class="teaching-topics" aria-label="Laboratory topics"><li>AC circuits</li><li>Transformers</li><li>Synchronous generators</li></ul>
+            </div>
+            <a class="teaching-action" href="Links/Software/software_EEE360Lab.html">Explore virtual labs</a>
+        </section>
+
+        <!-- SOFTWARE: Link to the existing overview of educational tools and demonstrations. -->
+        <section class="teaching-entry" aria-labelledby="software-title">
+            <div class="teaching-icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="7" width="40" height="29" rx="2"/><path d="M17 43H31M21 36V43M27 36V43M17 17L12 22L17 27M31 17L36 22L31 27M26 16L22 28"/></svg>
+            </div>
+            <div class="teaching-copy">
+                <h2 id="software-title">Educational Software / Demos</h2>
+                <p>Explore software tools and demonstrations that support learning about power systems and their practical applications.</p>
+                <ul class="teaching-topics" aria-label="Educational resource types"><li>Software tools</li><li>Lab demonstrations</li><li>Learning by exploration</li></ul>
+            </div>
+            <a class="teaching-action" href="Links/Teaching/demos.html">Explore demos</a>
+        </section>
+    </main>
+</body>
+</html>
