@@ -177,8 +177,9 @@ header{
     color: var(--asu-red);
 }
 
-.row .container a:hover{
-    border-bottom: 2px gray dotted;
+.row .container a:hover {
+    border-bottom: none;
+    text-decoration: underline;
 }
 
 .column{

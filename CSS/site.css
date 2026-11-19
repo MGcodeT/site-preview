@@ -63,6 +63,9 @@ gap: 12px 24px;}
 .column { min-width:0; padding:0 12px; }
 .container a:hover { border-bottom:0; text-decoration:underline; }
 .content-title { display:block; position:relative; font:700 21px/1.4 Georgia,serif; color:var(--yw-maroon); margin:32px 0 16px; padding:0 0 9px; border-bottom:4px solid #8C1D40; width:100%; }
+#main-content > .column > :first-child {
+    margin-top: 0;
+}
 .content-title::after { content:none; }
 .container li { margin-top:0; margin-bottom:9px; }
 .myinfo { grid-template-columns:150px minmax(0,1fr); gap:25px; align-items:center; background:#fff; padding:22px; border:1px solid var(--yw-line); border-radius:8px; }
