@@ -1,6 +1,195 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Resources &amp; Outreach | Yang Weng | ASU</title>
-<link rel="stylesheet" href="CSS/homepage.css"><link rel="stylesheet" href="CSS/index.css"><link rel="stylesheet" href="CSS/site.css"><script type="module" src="CSS/index.js"></script></head>
-<body data-site-section="resources"><div id="menu-placeholder"><a class="menu-loading" href="menu.html">Navigation</a></div><noscript><p class="site-notice">Enable JavaScript for shared navigation. <a href="menu.html">View all navigation links</a>.</p></noscript>
-<div class="bigtitle"><div class="thetitle"><p class="section-eyebrow">Yang Weng · Arizona State University</p><h1>Resources &amp; Outreach</h1></div></div>
-<main id="main-content" tabindex="-1" class="container directory-page"><div class="column"><p class="page-lead">Software, data, workshops, and activities from the group.</p><div class="section-grid"><a class="section-card" href="Links/Group/software.html"><h2>Software Tools</h2><p>Software and hardware developed by the group.</p><span class="card-arrow" aria-hidden="true">↗</span></a><a class="section-card" href="Links/Group/source.html"><h2>Datasets / Data Sources</h2><p>Power data, simulators, and learning resources.</p><span class="card-arrow" aria-hidden="true">↗</span></a><a class="section-card" href="workshops.html"><h2>Workshops</h2><p>Workshop agendas, galleries, and event information.</p><span class="card-arrow" aria-hidden="true">↗</span></a><a class="section-card" href="Links/Group/outreach.html"><h2>Outreach &amp; Media</h2><p>Outreach and educational activities.</p><span class="card-arrow" aria-hidden="true">↗</span></a><a class="section-card" href="index.html#news"><h2>News / Highlights</h2><p>Research and group updates.</p><span class="card-arrow" aria-hidden="true">↗</span></a></div></div></main></body></html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Explore resources and activities from the research group.">
+    <title>Resources &amp; Outreach | Yang Weng | ASU</title>
+    <link rel="stylesheet" href="CSS/homepage.css">
+    <link rel="stylesheet" href="CSS/index.css">
+    <link rel="stylesheet" href="CSS/site.css">
+    <script type="module" src="CSS/index.js"></script>
+    <style>
+        /* Page-local styles. Shared navigation and title remain controlled by site.css. */
+        #main-content.hub-page {
+            display: block;
+            width: calc(100% - 70px);
+            max-width: 1330px;
+            margin: 32px 0 56px 35px;
+            padding: 0;
+            color: #252329;
+            font: 16px/1.65 Georgia, "Times New Roman", serif;
+        }
+        .hub-page *, .hub-page *::before, .hub-page *::after { box-sizing: border-box; }
+        .hub-page .hub-intro {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 12px 32px;
+            padding-bottom: 27px;
+            border-bottom: 3px solid #8c1d40;
+        }
+        .hub-page .hub-intro h2 {
+            margin: 0;
+            font: 700 18px/1.35 Georgia, "Times New Roman", serif;
+            color: #8c1d40;
+        }
+        .hub-page .hub-intro p { margin: 0; color: #625e63; }
+        .hub-page .hub-entry {
+            display: grid;
+            grid-template-columns: 88px minmax(0, 1fr) 195px;
+            align-items: center;
+            gap: 30px;
+            padding: 34px 0;
+            border-bottom: 1px solid #dedbde;
+        }
+        .hub-page .hub-icon {
+            width: 88px;
+            height: 88px;
+            display: grid;
+            place-items: center;
+            position: relative;
+            background: #f5f5f6;
+            border-radius: 8px;
+            color: #8c1d40;
+        }
+        .hub-page .hub-icon::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 30px;
+            right: 30px;
+            height: 3px;
+            background: #ffc627;
+        }
+        .hub-page .hub-icon svg { display: block; width: 46px; height: 46px; }
+        .hub-page .hub-copy h2 {
+            margin: 0 0 9px;
+            font: 700 18px/1.35 Georgia, "Times New Roman", serif;
+            color: #8c1d40;
+        }
+        .hub-page .hub-copy p { margin: 0; max-width: 730px; }
+        .hub-page .hub-topics {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px 18px;
+            margin: 13px 0 0;
+            padding: 0;
+            list-style: none;
+            color: #625e63;
+            font: 14px/1.5 Arial, Helvetica, sans-serif;
+        }
+        .hub-page .hub-topics li { margin: 0; padding-left: 10px; border-left: 2px solid #c5b8be; }
+        .hub-page .hub-action {
+            display: block;
+            width: 100%;
+            padding: 10px 15px;
+            border: 1px solid #8c1d40;
+            border-radius: 3px;
+            color: #8c1d40;
+            background: #fff;
+            text-align: center;
+            text-decoration: none;
+            font: 400 16px/1.5 Arial, Helvetica, sans-serif;
+            transition: color .15s ease, background-color .15s ease;
+        }
+        .hub-page .hub-action:hover {
+            background: #8c1d40;
+            color: #fff;
+            border: 1px solid #8c1d40;
+            text-decoration: none;
+        }
+        .hub-page .hub-action:focus-visible { outline: 3px solid #8c1d40; outline-offset: 5px; }
+        @media (max-width: 1399px) {
+            #main-content.hub-page { width: calc(100% - 40px); margin-left: 20px; }
+        }
+        @media (max-width: 900px) {
+            .hub-page .hub-entry { grid-template-columns: 72px minmax(0, 1fr); gap: 16px 24px; }
+            .hub-page .hub-icon { width: 72px; height: 72px; align-self: start; }
+            .hub-page .hub-action { grid-column: 2; width: fit-content; min-width: 175px; }
+        }
+        @media (max-width: 650px) {
+            #main-content.hub-page { margin-top: 24px; }
+            .hub-page .hub-intro { padding-bottom: 22px; }
+            .hub-page .hub-intro h2 { font-size: 18px; }
+            .hub-page .hub-entry { grid-template-columns: 48px minmax(0, 1fr); gap: 16px; padding: 26px 0; }
+            .hub-page .hub-icon { width: 48px; height: 54px; border-radius: 4px; }
+            .hub-page .hub-icon svg { width: 31px; height: 31px; }
+            .hub-page .hub-icon::after { left: 14px; right: 14px; }
+            .hub-page .hub-copy h2 { font-size: 18px; }
+            .hub-page .hub-topics { gap: 8px 14px; }
+        }
+        @media (prefers-reduced-motion: reduce) { .hub-page .hub-action { transition: none; } }
+    
+        .hub-page .hub-date { margin:0 0 6px; color:#625e63; font:14px/1.5 Arial,Helvetica,sans-serif; letter-spacing:.035em; }
+        .hub-page .hub-links { display:flex; flex-wrap:wrap; gap:10px 22px; margin-top:12px; }
+        .hub-page .hub-links a { color:#8c1d40; font-size:16px; text-decoration:underline; text-underline-offset:3px; border-bottom:0; }
+        .hub-page .hub-links a:hover { border-bottom:0; text-decoration-thickness:2px; }
+        .hub-page .hub-links a:focus-visible { outline:3px solid #8c1d40; outline-offset:4px; }
+</style>
+</head>
+<body data-site-section="resources">
+    <div id="menu-placeholder"><a class="menu-loading" href="menu.html">Navigation</a></div>
+    <noscript><p class="site-notice">JavaScript is needed for the shared navigation. <a href="menu.html">View navigation links</a>.</p></noscript>
+    <div class="bigtitle"><div class="thetitle"><h1>Resources &amp; Outreach</h1></div></div>
+    <main id="main-content" tabindex="-1" class="hub-page">
+        <div class="hub-intro"><h2>Tools, knowledge, and community.</h2><p>Explore resources and activities from the research group.</p></div>
+        <!-- Software Tools: edit this section's text and links as needed. -->
+        <section class="hub-entry" aria-labelledby="software-tools">
+            <div class="hub-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="7" width="40" height="29" rx="2"/><path d="M17 43H31M21 36V43M27 36V43M17 17L12 22L17 27M31 17L36 22L31 27M26 16L22 28"/></svg></div>
+            <div class="hub-copy">
+                
+                <h2 id="software-tools">Software Tools</h2>
+                <p>Explore software tools, hardware, and demonstrations developed by the group.</p>
+                
+            </div>
+            <a class="hub-action" href="Links/Group/software.html">Explore tools</a>
+        </section>
+        <!-- Datasets / Data Sources: edit this section's text and links as needed. -->
+        <section class="hub-entry" aria-labelledby="datasets">
+            <div class="hub-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="24" cy="10" rx="16" ry="6"/><path d="M8 10V24C8 32 40 32 40 24V10M8 24V38C8 46 40 46 40 38V24M8 17C8 25 40 25 40 17M8 31C8 39 40 39 40 31"/></svg></div>
+            <div class="hub-copy">
+                
+                <h2 id="datasets">Datasets / Data Sources</h2>
+                <p>Find power-system data, simulators, and learning resources for research and education.</p>
+                
+            </div>
+            <a class="hub-action" href="Links/Group/source.html">Browse data sources</a>
+        </section>
+        <!-- Workshops: edit this section's text and links as needed. -->
+        <section class="hub-entry" aria-labelledby="workshops">
+            <div class="hub-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="10" width="36" height="32" rx="3"/><path d="M15 6V14M33 6V14M6 20H42M14 27H19M28 27H33M14 34H19M28 34H33"/></svg></div>
+            <div class="hub-copy">
+                
+                <h2 id="workshops">Workshops</h2>
+                <p>Browse workshop agendas, photo galleries, and event information.</p>
+                
+            </div>
+            <a class="hub-action" href="workshops.html">Explore workshops</a>
+        </section>
+        <!-- Outreach & Media: edit this section's text and links as needed. -->
+        <section class="hub-entry" aria-labelledby="outreach">
+            <div class="hub-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="14" r="6"/><path d="M12 40V35C12 28 17 25 24 25S36 28 36 35V40M7 10C1 12 3 21 9 21M41 10C47 12 45 21 39 21M8 27C3 28 2 33 2 37M40 27C45 28 46 33 46 37"/></svg></div>
+            <div class="hub-copy">
+                
+                <h2 id="outreach">Outreach &amp; Media</h2>
+                <p>Explore the group’s outreach and educational activities.</p>
+                
+            </div>
+            <a class="hub-action" href="Links/Group/outreach.html">Explore outreach</a>
+        </section>
+        <!-- News / Highlights: edit this section's text and links as needed. -->
+        <section class="hub-entry" aria-labelledby="news">
+            <div class="hub-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="5" width="34" height="38" rx="2"/><path d="M14 13H32M14 19H32M14 27H20V35H14ZM26 27H32M26 33H32"/></svg></div>
+            <div class="hub-copy">
+                
+                <h2 id="news">News / Highlights</h2>
+                <p>Follow research highlights, group news, and recent updates.</p>
+                
+            </div>
+            <a class="hub-action" href="index.html#news">View highlights</a>
+        </section>
+    </main>
+</body>
+</html>

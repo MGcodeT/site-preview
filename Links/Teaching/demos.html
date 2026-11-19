@@ -1,6 +1,173 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Educational Software / Demos | Yang Weng | ASU</title>
-<link rel="stylesheet" href="../../CSS/homepage.css"><link rel="stylesheet" href="../../CSS/index.css"><link rel="stylesheet" href="../../CSS/site.css"><script type="module" src="../../CSS/index.js"></script></head>
-<body data-site-section="teaching"><div id="menu-placeholder"><a class="menu-loading" href="../../menu.html">Navigation</a></div><noscript><p class="site-notice">Enable JavaScript for shared navigation. <a href="../../menu.html">View all navigation links</a>.</p></noscript>
-<div class="bigtitle"><div class="thetitle"><p class="section-eyebrow">Yang Weng · Arizona State University</p><h1>Educational Software / Demos</h1></div></div>
-<main id="main-content" tabindex="-1" class="container directory-page"><div class="column"><p class="page-lead">Explore the existing teaching and software resources.</p><div class="section-grid"><a class="section-card" href="../../Links/Software/software_EEE360Lab.html"><h2>EEE 360 Virtual Labs</h2><p>Twelve virtual lab demonstrations.</p><span class="card-arrow" aria-hidden="true">↗</span></a><a class="section-card" href="../../Links/Group/software.html"><h2>Software &amp; Hardware</h2><p>Tools and demonstrations developed by the group.</p><span class="card-arrow" aria-hidden="true">↗</span></a><a class="section-card" href="../../Links/Group/facility.html"><h2>Lab Facilities</h2><p>Hardware-in-the-loop and power system facilities.</p><span class="card-arrow" aria-hidden="true">↗</span></a></div></div></main></body></html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Virtual laboratories, software, and facilities for power systems education.">
+    <title>Educational Software / Demos | Yang Weng | ASU</title>
+    <link rel="stylesheet" href="../../CSS/homepage.css">
+    <link rel="stylesheet" href="../../CSS/index.css">
+    <link rel="stylesheet" href="../../CSS/site.css">
+    <script type="module" src="../../CSS/index.js"></script>
+    <style>
+        /* Page-local styles. Shared navigation and title remain controlled by site.css. */
+        #main-content.hub-page {
+            display: block;
+            width: calc(100% - 70px);
+            max-width: 1330px;
+            margin: 32px 0 56px 35px;
+            padding: 0;
+            color: #252329;
+            font: 16px/1.65 Georgia, "Times New Roman", serif;
+        }
+        .hub-page *, .hub-page *::before, .hub-page *::after { box-sizing: border-box; }
+        .hub-page .hub-intro {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 12px 32px;
+            padding-bottom: 27px;
+            border-bottom: 3px solid #8c1d40;
+        }
+        .hub-page .hub-intro h2 {
+            margin: 0;
+            font: 700 18px/1.35 Georgia, "Times New Roman", serif;
+            color: #8c1d40;
+        }
+        .hub-page .hub-intro p { margin: 0; color: #625e63; }
+        .hub-page .hub-entry {
+            display: grid;
+            grid-template-columns: 88px minmax(0, 1fr) 195px;
+            align-items: center;
+            gap: 30px;
+            padding: 34px 0;
+            border-bottom: 1px solid #dedbde;
+        }
+        .hub-page .hub-icon {
+            width: 88px;
+            height: 88px;
+            display: grid;
+            place-items: center;
+            position: relative;
+            background: #f5f5f6;
+            border-radius: 8px;
+            color: #8c1d40;
+        }
+        .hub-page .hub-icon::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 30px;
+            right: 30px;
+            height: 3px;
+            background: #ffc627;
+        }
+        .hub-page .hub-icon svg { display: block; width: 46px; height: 46px; }
+        .hub-page .hub-copy h2 {
+            margin: 0 0 9px;
+            font: 700 18px/1.35 Georgia, "Times New Roman", serif;
+            color: #8c1d40;
+        }
+        .hub-page .hub-copy p { margin: 0; max-width: 730px; }
+        .hub-page .hub-topics {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px 18px;
+            margin: 13px 0 0;
+            padding: 0;
+            list-style: none;
+            color: #625e63;
+            font: 14px/1.5 Arial, Helvetica, sans-serif;
+        }
+        .hub-page .hub-topics li { margin: 0; padding-left: 10px; border-left: 2px solid #c5b8be; }
+        .hub-page .hub-action {
+            display: block;
+            width: 100%;
+            padding: 10px 15px;
+            border: 1px solid #8c1d40;
+            border-radius: 3px;
+            color: #8c1d40;
+            background: #fff;
+            text-align: center;
+            text-decoration: none;
+            font: 400 16px/1.5 Arial, Helvetica, sans-serif;
+            transition: color .15s ease, background-color .15s ease;
+        }
+        .hub-page .hub-action:hover {
+            background: #8c1d40;
+            color: #fff;
+            border: 1px solid #8c1d40;
+            text-decoration: none;
+        }
+        .hub-page .hub-action:focus-visible { outline: 3px solid #8c1d40; outline-offset: 5px; }
+        @media (max-width: 1399px) {
+            #main-content.hub-page { width: calc(100% - 40px); margin-left: 20px; }
+        }
+        @media (max-width: 900px) {
+            .hub-page .hub-entry { grid-template-columns: 72px minmax(0, 1fr); gap: 16px 24px; }
+            .hub-page .hub-icon { width: 72px; height: 72px; align-self: start; }
+            .hub-page .hub-action { grid-column: 2; width: fit-content; min-width: 175px; }
+        }
+        @media (max-width: 650px) {
+            #main-content.hub-page { margin-top: 24px; }
+            .hub-page .hub-intro { padding-bottom: 22px; }
+            .hub-page .hub-intro h2 { font-size: 18px; }
+            .hub-page .hub-entry { grid-template-columns: 48px minmax(0, 1fr); gap: 16px; padding: 26px 0; }
+            .hub-page .hub-icon { width: 48px; height: 54px; border-radius: 4px; }
+            .hub-page .hub-icon svg { width: 31px; height: 31px; }
+            .hub-page .hub-icon::after { left: 14px; right: 14px; }
+            .hub-page .hub-copy h2 { font-size: 18px; }
+            .hub-page .hub-topics { gap: 8px 14px; }
+        }
+        @media (prefers-reduced-motion: reduce) { .hub-page .hub-action { transition: none; } }
+    
+        .hub-page .hub-date { margin:0 0 6px; color:#625e63; font:14px/1.5 Arial,Helvetica,sans-serif; letter-spacing:.035em; }
+        .hub-page .hub-links { display:flex; flex-wrap:wrap; gap:10px 22px; margin-top:12px; }
+        .hub-page .hub-links a { color:#8c1d40; font-size:16px; text-decoration:underline; text-underline-offset:3px; border-bottom:0; }
+        .hub-page .hub-links a:hover { border-bottom:0; text-decoration-thickness:2px; }
+        .hub-page .hub-links a:focus-visible { outline:3px solid #8c1d40; outline-offset:4px; }
+</style>
+</head>
+<body data-site-section="teaching">
+    <div id="menu-placeholder"><a class="menu-loading" href="../../menu.html">Navigation</a></div>
+    <noscript><p class="site-notice">JavaScript is needed for the shared navigation. <a href="../../menu.html">View navigation links</a>.</p></noscript>
+    <div class="bigtitle"><div class="thetitle"><h1>Educational Software / Demos</h1></div></div>
+    <main id="main-content" tabindex="-1" class="hub-page">
+        <div class="hub-intro"><h2>Explore, experiment, and learn.</h2><p>Virtual laboratories, software, and facilities for power systems education.</p></div>
+        <!-- EEE 360 Virtual Labs: edit this section's text and links as needed. -->
+        <section class="hub-entry" aria-labelledby="virtual-labs">
+            <div class="hub-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6H30M20 6V19L8 37Q6 42 12 42H36Q42 42 40 37L28 19V6M14 29H34"/><circle cx="19" cy="34" r="1.8"/><circle cx="28" cy="37" r="1.5"/></svg></div>
+            <div class="hub-copy">
+                
+                <h2 id="virtual-labs">EEE 360 Virtual Labs</h2>
+                <p>Explore twelve virtual lab demonstrations that connect circuit and electrical machine concepts with visual examples.</p>
+                <ul class="hub-topics"><li>AC circuits</li><li>Transformers</li><li>Electrical machines</li></ul>
+            </div>
+            <a class="hub-action" href="../Software/software_EEE360Lab.html">Explore virtual labs</a>
+        </section>
+        <!-- Software & Hardware: edit this section's text and links as needed. -->
+        <section class="hub-entry" aria-labelledby="software-hardware">
+            <div class="hub-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="7" width="40" height="29" rx="2"/><path d="M17 43H31M21 36V43M27 36V43M17 17L12 22L17 27M31 17L36 22L31 27M26 16L22 28"/></svg></div>
+            <div class="hub-copy">
+                
+                <h2 id="software-hardware">Software &amp; Hardware</h2>
+                <p>Browse software tools, hardware resources, and demonstrations developed by the research group.</p>
+                <ul class="hub-topics"><li>Software</li><li>Hardware</li><li>Demonstrations</li></ul>
+            </div>
+            <a class="hub-action" href="../Group/software.html">Explore tools</a>
+        </section>
+        <!-- Lab Facilities: edit this section's text and links as needed. -->
+        <section class="hub-entry" aria-labelledby="lab-facilities">
+            <div class="hub-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="8" width="38" height="32" rx="2"/><path d="M5 19H43M17 19V40M30 19V40M10 13H12M17 13H19M24 13H26M10 26H12M22 26H24M35 26H37M10 32H12M22 32H24M35 32H37"/></svg></div>
+            <div class="hub-copy">
+                
+                <h2 id="lab-facilities">Lab Facilities</h2>
+                <p>Explore the group’s power system facilities and hardware-in-the-loop laboratory environment.</p>
+                <ul class="hub-topics"><li>Power systems</li><li>Hardware-in-the-loop</li></ul>
+            </div>
+            <a class="hub-action" href="../Group/facility.html">Explore facilities</a>
+        </section>
+    </main>
+</body>
+</html>
