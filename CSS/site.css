@@ -226,3 +226,103 @@ table.agenda td,table.agenda th { overflow-wrap:anywhere; }
         padding-left: 0;
     }
 }
+/* White page background */
+html,
+body {
+    background: #fff;
+}
+
+body {
+    font-size: 16px;
+}
+
+/* Smaller page titles and a more compact title area */
+.bigtitle {
+    background: #fff;
+    min-height: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.bigtitle .thetitle,
+.bigtitle .thetitle h1 {
+    font-size: 22px;
+    line-height: 1.35;
+}
+
+/* Hide "Yang Weng · Arizona State University" above titles */
+.section-eyebrow {
+    display: none;
+}
+
+/* Full-width rectangular navigation background */
+.yw-header {
+    padding: 0;
+    background: #fff;
+}
+
+#menu-placeholder {
+    min-height: 48px;
+}
+
+.yw-nav {
+    width: 100%;
+    min-height: 48px;
+    margin: 0;
+    padding: 4px 35px;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    background: #8C1D40;
+}
+
+/* Main menu text: same size as the body text */
+.yw-link {
+    font-size: 16px;
+    line-height: 1.4;
+    min-height: 38px;
+    padding: 6px 10px;
+}
+
+/* Slightly smaller icons */
+.yw-icon {
+    width: 21px;
+    height: 21px;
+}
+
+/* Reduce submenu arrow button height */
+.yw-expand {
+    min-height: 38px;
+}
+
+/* Classic ASU gold for the active menu item */
+.yw-item.is-current > .yw-top {
+    background: #FFC627;
+    border-color: #FFC627;
+    color: #191919;
+    box-shadow: none;
+}
+
+.yw-item.is-current .yw-link {
+    color: #191919;
+}
+
+.yw-item.is-current .yw-icon {
+    color: #8C1D40;
+}
+
+/* Compact menu button on smaller screens */
+.yw-toggle {
+    min-height: 38px;
+    padding: 6px 10px;
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+@media (max-width: 1399px) {
+    .yw-nav {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
