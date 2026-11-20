@@ -99,13 +99,20 @@ gap: 12px 24px;}
 .yw-footer>div { flex:1; }
 .yw-footer strong { display:block; font-size:19px; color:var(--yw-maroon); margin-bottom:5px; }
 .yw-footer a { white-space:nowrap; }
-/* Workshop heroes stay in document flow, including when their images are omitted. */
-.column img.bigimage { position:relative; z-index:auto; inset:auto; display:block; width:100%; height:300px; object-fit:cover; background:#e9e1d7; }
-.column .bigImageBack { display:none; }
-.column .bigImageDes { margin:0 !important; padding:26px 30px; background:var(--yw-maroon); }
-.bigImageDes h1 { margin:0 0 16px; font-size:clamp(26px,3vw,42px) !important; line-height:1.25 !important; letter-spacing:normal !important; }
-.column .two-column { grid-template-columns:minmax(0,2fr) minmax(0,1fr); gap:30px; }
-.column .two-column>* { min-width:0; }
+/* Keep workshop background layers above the page background. */
+body:has(.bigImageBack) {
+    isolation: isolate;
+}
+
+/* Responsive columns below the workshop hero. */
+.column .two-column {
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+    gap: 30px;
+}
+
+.column .two-column > * {
+    min-width: 0;
+}
 table.agenda { width:100%; table-layout:auto; }
 table.agenda td,table.agenda th { overflow-wrap:anywhere; }
 /* Speakers: independent photo height and text flow at every viewport. */

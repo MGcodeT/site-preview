@@ -356,3 +356,25 @@ nav.menu { padding-top: 0; padding-bottom: 0; }
   .Gallery-grid img { display: block; max-width: 100%; width: 100%; height: 240px; }
   .Gallery-grid img:hover { transform: none; }
 }
+
+/* Gallery light/dark theme */
+body.gallery-dark {
+    background: #181818;
+    color: #f5f5f5;
+}
+
+.Gallery-grid #light,
+.Gallery-grid #dark {
+    cursor: pointer;
+}
+
+body.gallery-dark .Gallery-grid #light,
+body.gallery-dark .Gallery-grid #dark {
+    color: #aaa;
+}
+
+body.gallery-dark .Gallery-grid span.active,
+body.gallery-dark .Gallery-grid #light:hover,
+body.gallery-dark .Gallery-grid #dark:hover {
+    color: #fff;
+}

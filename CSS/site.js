@@ -122,3 +122,16 @@ document.querySelectorAll('.filter .chip').forEach(chip => {
         if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); chip.click(); }
     });
 });
+
+// Light/dark controls used by the workshop galleries.
+function setGalleryTheme(dark) {
+    if (!document.querySelector('.Gallery-grid')) return;
+
+    document.body.classList.toggle('gallery-dark', dark);
+    document.getElementById('dark')?.classList.toggle('active', dark);
+    document.getElementById('light')?.classList.toggle('active', !dark);
+}
+
+// Inline onclick handlers need functions exposed on window.
+window.light2dark = () => setGalleryTheme(true);
+window.dark2light = () => setGalleryTheme(false);
